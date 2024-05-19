@@ -12,7 +12,7 @@ body {
     font-size: 24px;
     text-align: auto;
     color: #ccccff;
-    background-image: "Graphics/horizon.png", "Graphics/starry.gif";
+    background-image: url(../Graphics/horizon.png), url(../Graphics/starry.gif);
     background-position: bottom, left top;
     background-repeat: repeat-x, repeat;
     background-size: 100% cover, auto;

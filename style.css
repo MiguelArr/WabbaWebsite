@@ -48,15 +48,11 @@ body {
     background-size: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    height: 100%;
     margin: 0;
     padding: 0;
-/*
-    background-attachment: center;
-    background-position: auto;
-    justify-content: center;
-    align-items: center; */
 }
 
 a:link {
@@ -84,6 +80,22 @@ a:visited {
     padding-top: 60px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 30vw;
+    max-width: 600px;
+    align-items: center;
+    flex: 1;
+}
+
 .flyknight-text {
     font-family: "Press Start 2P", sans-serif;
 }
@@ -104,7 +116,7 @@ a:visited {
     box-shadow: -5px 5px 2px #00000081;
     margin-top: 10px;
     margin-bottom: 10px;
-    top: -0vh;
+    top: 0vh;
   }
 .button-link {
     display: inline-block;
@@ -148,6 +160,7 @@ body, table, th, td {
     width: 600px;
     position: relative;
     top: 10px;
+    left: 0px;
 }
 
 

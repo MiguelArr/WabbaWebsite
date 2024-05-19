@@ -28,7 +28,7 @@ body {
 }
 
 #LayeredBG {
-    background-image: url(graphics/bodybg.png), url(graphics/starry.gif);
+    background-image: url(Graphics/bodybg.png), url(Graphics/starry.gif);
     background-position: center, left top;
     background-repeat: repeat-y, repeat;
     padding: 15px;

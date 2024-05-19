@@ -1,0 +1,21 @@
+.expandable-toggle {
+    display: none;
+}
+
+.expandable-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hidden-content {
+    display: none;
+}
+
+.expandable-toggle:checked + .expandable-button {
+    transform: scale(1.2);
+}
+
+.expandable-toggle:checked ~ .hidden-content {
+    display: block;
+}

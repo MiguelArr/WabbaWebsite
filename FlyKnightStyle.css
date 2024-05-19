@@ -1,0 +1,293 @@
+body {
+    font-family: "Press Start 2P", sans-serif;
+    color: #ffdd25;
+    text-align: auto;
+    text-shadow: 3px 3px 0px #000000;
+    background-color: #253027;
+    cursor: url(FlyKnight/mouse_hand_f1.gif), auto;
+    animation: cursor 1s linear infinite;
+  }
+#background-container {
+  background-image: url(FlyKnight/bodybg.png), url(FlyKnight/BGCave.png);
+  background-position: center, center;
+  background-repeat: repeat-y, no-repeat;
+  background-size: auto, cover;
+  height: auto, 100vh;
+  background-attachment: local, fixed;
+  z-index: -2;
+}
+a:link {
+    color: #d4fa5a;
+    text-align: auto;
+    text-decoration: underline;
+  }
+a:hover {
+    color: #ff0000; /* Color on hover */
+    animation: rainbow 1s linear infinite;
+  }
+a:visited {
+    color: #687f1c;
+    text-align: auto;
+    text-decoration: underline;
+  }
+  li {
+    font-size: 20px;
+    margin-bottom: 30px; /* Add bottom margin between list items */
+  }
+.centered-text {
+    white-space: nowrap; /* Prevents text from wrapping */
+    text-align: center;
+  }
+  div {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 20px;
+  }
+
+.banner-container {
+  text-align: center; /* Center the contents horizontally */
+  display: flex;
+  max-width: 1000px;   /* Set the maximum width of the banner container */
+  margin: 0 auto;     /* Auto margin left and right to center the container */
+  }
+.banner-container img {
+    max-width: 100%;    /* Ensure the image inside the banner container doesn't exceed its width */
+    min-width: 900px;
+    height: auto;       /* Maintain the aspect ratio of the image */
+    display: inline-block;
+}
+
+.image-adyacent-right {
+  float: right;
+  margin: 0px 0px 15px 20px;
+}
+.image-adyacent-left {
+  float: left;
+  margin: 0px 0px 15px 20px;
+}
+.main-background {
+    background-color: #253027; /* Main background color */
+    height: 100vh; /* Set the height to fill the entire viewport */
+    display: flex;
+    align-items: center; /* Center the child vertically */
+}
+
+.center-block {
+    background-color: #324136; /* Color of the center block */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(3vh);
+    }
+}
+
+.letter {
+    display: inline-block;
+    animation: bounce 1s infinite;
+    animation-timing-function: steps(3, end);
+    font-size: clamp(8px, 5vw, 50px);
+    text-shadow: 5px 5px 0px #000000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.bouncing-container {
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-align: center;
+  margin: auto;
+  max-width: 20%;
+}
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  56% { color: lightblue; }
+  84% { color: violet; }
+  100% { color: red; }
+  
+}
+@keyframes bloody {
+  0% { 
+    color: red; 
+    transform: translateX(0px);
+    text-transform: uppercase; }
+  50% { 
+    color: darkred; 
+    transform: translateX(15px); 
+    text-transform: lowercase; }
+  100% { color: red; 
+    transform: translateX(0px);
+    text-transform: uppercase; }   
+}
+@keyframes lunamoth {
+  0% { color: rgb(0, 255, 191); }
+  28% { color: rgb(0, 255, 85); }
+  56% { color: rgb(24, 194, 236); }
+  84% { color: rgb(0, 255, 85); }
+  100% { color: rgb(0, 255, 191); }
+}
+.content-table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(6px, 1.25vw, 18px);
+  min-width: 100%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 0.1vw 0.5vw #253027;
+}
+.content-table tbody{
+  text-align: left;
+}
+.content-table tbody th {
+  background-color: #253027;
+  font-size: clamp(8px, 2vw, 24px);
+}
+.content-table tbody tr {
+border-bottom: 0.3vw solid #ffdd25;
+}
+.content-table tbody tr:nth-of-type(odd){
+  background-color: #ffde2515;
+}
+.content-table th, td {
+  padding: clamp(10px, 1vh, 0.3vh) 1vw;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 0.5vw solid #253027;
+}
+
+.bloody-bold {
+  color: red; /* Change color of bold text */
+  font-size: 20px; /* Adjust font size of bold text */
+  animation: bloody 0.1s linear infinite;
+}
+.luna-bold {
+  color: rgb(0, 255, 221); /* Change color of bold text */
+  font-size: 20px; /* Adjust font size of bold text */
+  animation: lunamoth 1s linear infinite;
+}
+.rainbow-bold {
+  color: rgb(0, 255, 221); /* Change color of bold text */
+  animation: rainbow 2s linear infinite;
+}
+.fixed-element {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  padding: 0px; /* Adjust padding as needed */
+}
+.fixed-musicplayer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0;
+  padding: 0px; /* Adjust padding as needed */
+  background-color: #000000 solid;
+}
+.expanding-button { 
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 20px;
+  color: #ffdd25;
+  padding: 0px 0px;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: width 0.2s steps(3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 75px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  box-shadow: -5px 5px 0px #00000081;
+
+}
+.button-link {
+  display: inline-block;
+}
+.expanding-button:hover {
+  width: 220px; /* Change width on hover */
+}
+.expanding-button img {
+  margin-right: 10px;
+}
+.button-text {
+  display: none;
+  text-align: center;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.expanding-button:hover .button-text{
+  display: block;
+  animation: fadeIn 0.5s steps(2);
+}
+.window-border {
+  border: 0.1em solid;
+  border-image-source: url(FlyKnight/RetroWindow.PNG);
+  border-image-slice: 33 3 3 3 fill;
+  border-image-width: 6% 0.5% 1% 0.5%;
+  border-image-outset: 2em 0.25em 0.35em 0.25em; /* Convert pixel values to em */
+  border-image-repeat: stretch; 
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.window-border img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes cursor{
+  0% { 
+    cursor: url(FlyKnight/mouse_hand_f1.gif), auto;
+  }
+  14.28% { 
+    cursor: url(FlyKnight/mouse_hand_f2.gif), auto;
+  }
+  28.5% { 
+    cursor: url(FlyKnight/mouse_hand_f3.gif), auto;
+  }
+  42.78% { 
+    cursor: url(FlyKnight/mouse_hand_f4.gif), auto;
+  }
+  57.06% { 
+    cursor: url(FlyKnight/mouse_hand_f5.gif), auto;
+  }
+  71.34% { 
+    cursor: url(FlyKnight/mouse_hand_f4.gif), auto;
+  }
+  85.62% { 
+    cursor: url(FlyKnight/mouse_hand_f3.gif), auto;
+  }
+  100% { 
+    cursor: url(FlyKnight/mouse_hand_f2.gif), auto;
+  }
+}
+
+@media (max-aspect-ratio: 3/4) {
+  .fixed-element {
+      display: none;
+  }
+}
+@media (max-height: 900px) {
+  .fixed-element {
+      display: none;
+  }
+}

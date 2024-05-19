@@ -1,0 +1,202 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: bold; /* or bold */
+    font-style: normal; /* or normal */
+    font-size: 24px;
+    text-align: auto;
+    color: #ccccff;
+    background-image: url(graphics/horizon.png), url(graphics/starry.gif);
+    background-position: bottom, left top;
+    background-repeat: repeat-x, repeat;
+    background-size: 100% cover, auto;
+    background-attachment: fixed, scroll;
+    padding: 15px;
+}
+
+.centered-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#LayeredBG {
+    background-image: url(graphics/bodybg.png), url(graphics/starry.gif);
+    background-position: center, left top;
+    background-repeat: repeat-y, repeat;
+    padding: 15px;
+}
+
+.towerBG-header {
+    height: 671px;
+    width: 600px;
+    background-image: url(Personal/TowerBodyTop.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    /*
+    background-attachment: center;
+    background-position: auto;*/
+}
+.towerBG-body {
+    height: auto;
+    width: 600px;
+    background-image: url(Personal/TowerBody.gif);
+    background-repeat: repeat-y;
+    background-size: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+/*
+    background-attachment: center;
+    background-position: auto;
+    justify-content: center;
+    align-items: center; */
+}
+
+a:link {
+    color: orange;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: lightblue;
+    text-decoration: none;
+}
+  
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sidenav {
+    height: 100%;
+    width: 500px;
+    position: fixed;
+    top: 0;
+    Left: 0;
+    background-color: blue;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.flyknight-text {
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.index-button { 
+    font-size: 20px;
+    border: none;
+    color: #25c1ff;
+    border-radius: 20px;
+    transition: width 0.2s ease-out;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+    height: 75px;
+    box-shadow: -5px 5px 2px #00000081;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: -0vh;
+  }
+.button-link {
+    display: inline-block;
+}
+.index-button:hover {
+    width: 100%; /* Change width on hover */
+}
+.index-button img {
+    vertical-align: middle;
+    transition: height 0.5s ease-out;
+    height: 80%;
+}
+.index-button:hover img {
+    height: 100%;
+}
+.index-button span {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+body, table, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#actionButton {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#buttonImage {
+    padding: 0;
+    margin: 0;
+    height: 671px;
+    width: 600px;
+    position: relative;
+    top: 10px;
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    56% { color: lightblue; }
+    84% { color: violet; }
+    100% { color: red; }
+}
+
+.letter {
+    display: inline-block;
+    animation: bounce 1s infinite;
+    animation-timing-function: steps(3, end);
+    font-size: clamp(8px, 5vw, 50px);
+    text-shadow: 5px 5px 0px #000000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.bouncing-container {
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-align: center;
+  margin: auto;
+  max-width: 20%;
+}
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  56% { color: lightblue; }
+  84% { color: violet; }
+  100% { color: red; }
+  
+}

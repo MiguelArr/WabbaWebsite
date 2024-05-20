@@ -50,7 +50,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
+
     margin: 0;
     padding: 0;
 }
@@ -86,14 +86,31 @@ a:visited {
     justify-content: center;
 }
 
+@media only screen and (max-width: 800px) {
+    .row {
+        background-color: lightblue;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.spacer {
+    height: 100px;
+}
+@media only screen and (max-width: 800px) {
+    .spacer {
+        height: 0px;
+    }
+}
+
 .column {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 30vw;
+    width: 70vw;
     max-width: 600px;
     align-items: center;
-    flex: 1;
 }
 
 .flyknight-text {
@@ -101,9 +118,10 @@ a:visited {
 }
 
 .index-button { 
-    font-size: 20px;
+    font-size: 30px;
     border: none;
-    color: #25c1ff;
+    color: #ffffff;
+    text-shadow: -2px 2px 3px #000000;
     border-radius: 20px;
     transition: width 0.2s ease-out;
     cursor: pointer;
@@ -113,7 +131,7 @@ a:visited {
     width: 80%;
     justify-content: center;
     height: 75px;
-    box-shadow: -5px 5px 2px #00000081;
+    box-shadow: -5px 5px 3px #00000081;
     margin-top: 10px;
     margin-bottom: 10px;
     top: 0vh;
@@ -184,7 +202,7 @@ body, table, th, td {
     display: inline-block;
     animation: bounce 1s infinite;
     animation-timing-function: steps(3, end);
-    font-size: clamp(8px, 5vw, 50px);
+    font-size: clamp(30px, 10vw, 50px);
     text-shadow: 5px 5px 0px #000000;
     padding-top: 0px;
     padding-bottom: 0px;

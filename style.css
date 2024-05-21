@@ -26,31 +26,17 @@ body {
     text-align: center;
     padding: 20px;
 }
-.towerBG-header {
-    height: 671px;
-    width: 600px;
-    background-image: url(Personal/TowerBodyTop.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    /*
-    background-attachment: center;
-    background-position: auto;*/
-}
+
 .towerBG-body {
     height: auto;
     width: 600px;
     background-image: url(Personal/TowerBody.gif);
     background-repeat: repeat-y;
-    background-size: auto;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     margin: 0;
     padding: 0;
 }
@@ -108,9 +94,14 @@ a:visited {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 70vw;
     max-width: 600px;
     align-items: center;
+}
+@media (max-width: 800px) {
+    .column {
+        transform: scale(0.8); /* Adjust the scale value as needed */
+        max-width: 100%;
+    }
 }
 
 .flyknight-text {

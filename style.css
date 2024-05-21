@@ -18,6 +18,7 @@ body {
     background-size: 100% cover, auto;
     background-attachment: fixed, scroll;
     padding: 15px;
+    overflow-x: hidden;
 }
 
 .centered-text {
@@ -99,7 +100,7 @@ a:visited {
 }
 @media (max-width: 800px) {
     .column {
-        transform: scaleX(0.2); /* Adjust the scale value as needed */
+        transform: scale(0.8); /* Adjust the scale value as needed */
         max-width: 100%;
     }
 }

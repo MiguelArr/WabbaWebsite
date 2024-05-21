@@ -100,8 +100,8 @@ a:visited {
 }
 @media (max-width: 800px) {
     .column {
-        transform: scale(0.8); /* Adjust the scale value as needed */
-        max-width: 100%;
+        transform: scale(0.5); /* Adjust the scale value as needed */
+        max-width: 80%;
     }
 }
 

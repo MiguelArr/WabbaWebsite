@@ -4,7 +4,7 @@ document.getElementById('actionButton').addEventListener('click', function() {
     var originalSrc = buttonImage.src;
     var gifSrc = "Personal/TowerBodyTop_Lighted.gif";
     var buttonAudio = document.getElementById('buttonAudio');
-    var gifDuration = 1200; // Duration in milliseconds, adjust as needed
+    var gifDuration = 600; // Duration in milliseconds, adjust as needed
 
     // Disable the button
     button.disabled = true;

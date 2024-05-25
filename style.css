@@ -13,9 +13,6 @@ body {
     padding: 15px;
     cursor: url(Personal/WandCursor.gif), auto;
 }
-.custom-cursor {
-    cursor: url(Personal/WandCursor.gif), auto;
-}
 
 .readable-paragraph {
     font-family: "Roboto", Arial, sans-serif;
@@ -66,7 +63,7 @@ body {
     text-align: center;
     padding: 20px;
 }
-
+/* */
 .towerBG-body {
     height: auto;
     width: 100%;

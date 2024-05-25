@@ -12,10 +12,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poetsen+One&display=swap" rel="stylesheet">
 
 </head>
-<body class="row">
+<body>
+  <div class="row">
   <div class="column">
 
-        <button id="actionButton">
+        <button id="actionButton" style="cursor:default; cursor: url(Personal/WandCursor_Highlight.gif), auto;">
           <img id="buttonImage" src="Personal/TowerBodyTop.gif">
         </button>
         <audio id="buttonAudio" src="Personal/lightning-strike.wav"></audio>
@@ -57,28 +58,39 @@
         </div>
   </div>
 
-  <div class="column" id="introduction" style="margin: 50px;">
+  <div class="column" id="introduction">
     <div class="spacer"></div>
-    <h1 class="bouncing-text" style="font-family: Poetsen One;">WELCOME</h1>
-    <p style="text-align: left; text-shadow: 5px 5px 2px #171535;;">
-      <br><br>
-        Sup, I'm Wabbaboy, some guy from Spain that makes games and stuff. I was born on 1993 and live in a cozy town on
-        the eastern side of Spain.<br><br>
-        
-        I'm a game developer, graduated in a 3D game art course in 2015, had a job here and there and then begun making my own games 
-        as a self-taught programmer. My main project is <a href="https://store.steampowered.com/app/2168070/Sorceress/" target="_blank">Sorceress</a>, a game 
-        where you step into the boots of a young gal that casts spells and kicks stuff, it's rad I think.<br><br>
-        I also made <a href="FlyKnight.html" target="_blank">FlyKnight</a>, a 
-        King's Field inspired game with Runescape-style graphics which was made in only 2 weeks with help from very talented people.
-        <br><br>
-        I have some other interests and I've made this website to talk about them, learn HTML and indulge myself a little bit, 
-        hope you enjoy your time in here.
-    </p>
+    <h1 class="bouncing-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">WELCOME</h1>
+    <div style="border: 2px dashed #7a76a34b;margin-top: 50px;margin-bottom: 50px;">
+      <p class="readable-paragraph" style="margin: 20px;">
+          Sup, I'm Wabbaboy, some guy from Spain that makes games and stuff. I was born on 1993 and live in a cozy town on
+          the eastern side of Spain.<br><br>
+          
+          I'm a game developer, graduated in a 3D game art course in 2015, had a job here and there and then begun making my own games 
+          as a self-taught programmer. My main project is <a href="https://store.steampowered.com/app/2168070/Sorceress/" target="_blank">Sorceress</a>, a game 
+          where you step into the boots of a young gal that casts spells and kicks stuff, it's rad I think.<br><br>
+          I also made <a href="FlyKnight.html" target="_blank">FlyKnight</a>, a 
+          King's Field inspired game with Runescape-style graphics which was made in only 2 weeks with help from very talented people.
+          <br><br>
+          I have some other interests and I've made this website to talk about them, learn HTML and indulge myself a little bit, 
+          hope you enjoy your time in here.
+      </p>
+    </div>
     <img src="Graphics/wizard.gif">
+
   </div>
+</div>
+
+<div  class="centered-img" style="flex-direction: column; color: aliceblue;">
+  <p>Denizen of the</p>
+  <img src="Personal/badge.gif">
+  © Miguel Arroyo 2024<br><br>
+</div>
 
 <script src="bouncescript.js"></script>
 <script src="lightning.js"></script>
+<script type="text/javascript" src="sparkles.js"></script>
+
 </body>
 
 </html>

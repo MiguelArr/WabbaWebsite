@@ -16,7 +16,7 @@ body {
     font-size:  clamp(5px, 1rem + 2vw, 24px);
     color: #ccccff;
     text-align: left; 
-    text-shadow: 5px 5px 2px #171535;;
+    text-shadow: 0.2rem 0.2rem 2px #171535;;
 }
 
 .row {
@@ -94,11 +94,12 @@ body {
 
 a:link {
     color: rgb(255, 162, 24);
+    text-decoration: none;
 }
   
 a:visited {
-    color: rgb(0, 4, 255);
-    text-decoration: underline wavy rgb(255, 102, 0);
+    color: rgb(255, 162, 24);
+    text-decoration: none;
 }
 
 a:hover {
@@ -294,6 +295,7 @@ a:hover {
     border-radius: 50%;
     opacity: 0.8;
     pointer-events: none;
+    filter: blur(20px);
     animation: rainbowFade 1s ease-in;
     /* Remove or modify the transform property here */
   }
@@ -307,16 +309,7 @@ a:hover {
     border-bottom: 150px solid gold;
     transform: rotate(-180deg);
     border-radius: 50%;
-  }
-  .happysTrail::after {
-    position: absolute;
-    content: '';
-    top: 3px;
-    left: -105px;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 70px solid gold;
-    transform: rotate(-70deg);
+    filter: blur(20px);
   }
   
   @keyframes rainbowFade {
@@ -329,4 +322,65 @@ a:hover {
         transform: translateY(200px) scale(0.0);
 
     }
+  }
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* sidebar elements taken from the FlyKnight page */
+  .fixed-element {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    padding: 0px; /* Adjust padding as needed */
+  }
+  .fixed-musicplayer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0;
+    padding: 0px; /* Adjust padding as needed */
+    background-color: #000000 solid;
+  }
+  .expanding-button { 
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 20px;
+    color: #ffdd25;
+    padding: 0px 0px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: width 0.2s steps(3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 75px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: -5px 5px 0px #00000081;
+  }
+  .button-link {
+    display: inline-block;
+  }
+  .expanding-button:hover {
+    width: 220px; /* Change width on hover */
+  }
+  .expanding-button img {
+    margin-right: 10px;
+  }
+  .button-text {
+    display: none;
+    text-align: center;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .expanding-button:hover .button-text{
+    display: block;
+    animation: fadeIn 0.5s steps(2);
   }

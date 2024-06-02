@@ -162,7 +162,7 @@ a:hover {
     font-size: 20px;
     border: none;
     color: #ffffff;
-    text-shadow: -2px 2px 3px #000000;
+    text-shadow: 0px 0px 10px #000000;
     border-radius: 20px;
     transition: width 0.2s ease-out;
     cursor:default;
@@ -194,6 +194,7 @@ a:hover {
 }
 .index-button-small:hover {
     width: 50%;
+    filter: brightness(150%);
 }
 .button-row {
     display: flex;
@@ -214,14 +215,13 @@ a:hover {
     display: inline-block;
 }
 .index-button:hover {
-    width: 100%; /* Change width on hover */
+    width: 100%;
+    filter: brightness(150%);
 }
 .index-button img {
     vertical-align: middle;
     transition: height 0.5s ease-out;
     height: 80%;
-}
-.index-button:hover img {
 }
 
 .index-button span {
@@ -263,9 +263,9 @@ a:hover {
     50% {
         transform: translateY(10px);
     }
-    0% { color: rgb(15, 126, 0); }
-    42% { color: rgb(214, 252, 0); }
-    100% { color: rgb(15, 126, 0); }
+    0% { filter: brightness(200%); }
+    50% { filter: brightness(90%); }
+    100% { filter: brightness(200%); }
 }
 
 .letter {
@@ -366,17 +366,19 @@ a:hover {
 /* sidebar elements taken from the FlyKnight page */
   .fixed-element {
     position: fixed;
-    top: 200px;
-    left: 0;
+    display: flex;
+    top: 0x;
+    left: 100px;
     padding: 0px; /* Adjust padding as needed */
+    z-index: 10;
   }
-  .fixed-musicplayer {
+  .fixed-element-small {
     position: fixed;
-    bottom: 0px;
-    right: 0px;
-    left: 0;
+    display: flex;
+    top: 0x;
+    right: 100px;
     padding: 0px; /* Adjust padding as needed */
-    background-color: #000000 solid;
+    z-index: 10;
   }
   .expanding-button { 
     font-family: "Press Start 2P", sans-serif;
@@ -384,39 +386,50 @@ a:hover {
     color: #ffdd25;
     padding: 0px 0px;
     border: none;
-    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: width 0.2s steps(3);
     cursor: pointer;
     display: flex;
     align-items: center;
-    width: 100px;
+    width: 200px;
     height: 75px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    box-shadow: -5px 5px 0px #00000081;
+    margin-right: 50px;
+    box-shadow: -5px 0px 0px #00000079;
+  }
+  .expanding-button-small { 
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 20px;
+    justify-content: flex-end ;
+    margin-left: auto;
+    padding: 0px 0px;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    width: 75px;
+    height: 75px;
+    margin-left: 25px;
+    box-shadow: 5px 0px 0px #00000079;
+  }
+  .expanding-button-small img {
+    margin: 10px;
   }
   .button-link {
     display: inline-block;
   }
-  .expanding-button:hover {
-    width: 220px; /* Change width on hover */
-  }
-  .expanding-button img {
-    margin-right: 10px;
+  button:hover {
+    filter: brightness(150%);
   }
   .button-text {
-    display: none;
     text-align: center;
   }
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-  .expanding-button:hover .button-text{
-    display: block;
-    animation: fadeIn 0.5s steps(2);
-  }
+
 
 .content {
     width: 70%;

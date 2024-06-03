@@ -7,16 +7,17 @@ body {
     background-repeat: repeat-x, repeat-y, repeat;
     background-size: 100% cover, cover, auto;
     background-attachment: fixed, scroll, fixed;
-    cursor: url(Personal/WandCursor.gif), auto;
     height: 100vh;
     color: rgb(255, 202, 57);
     font-family: "Convergence", Arial, sans-serif;
     font-weight: normal;
     font-size:  clamp(5px, 1rem + 2vw, 24px);
     text-shadow: 0.2rem 0.2rem 2px #171535;;
+    overflow-x: hidden;
 }
 body h1 {
     font-size: 40px;
+    font-family: 'Nova Cut', sans-serif;
 }
 body b{
     filter: brightness(150%);
@@ -24,33 +25,124 @@ body b{
 
 /* HEADER */
 header {
-    min-height: 170px;
+    min-height: 200px;
     display: flex;
     align-items: center;
     flex-direction: row;
-    font-family: 'Gothica', sans-serif;
+    justify-content: center;
+    font-family: 'Nova Cut', sans-serif;
     background-image: 
         url("Screenshot01.png"),
         linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #162227 40%);
     background-size: cover,auto;
 }
-header div{
+header button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+.collapsable-menu {
+    z-index: 1000;
+}
+.logo {
+    max-width: 500px;
+    min-width: 400px;
+    height: auto;
+    margin-left: 50px; 
+    margin-top: -40px;
+}
+
+.primary-navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+}
+.primary-navigation li {
+    margin-right: 5vw;
+}
+.mobile-nav-toggle {
+    display: none;
+}
+nav{
     margin-top: -60px;
     display: flex;
     justify-content: flex-end;
     flex-grow: 3;
 }
-header h1 {
-    font-weight: bold;
+header span {
+    font-weight: normal;
     font-style: normal;
     color: rgb(255, 202, 57);
     text-shadow: 0.2rem 0.2rem 2px #00000094;
     font-size: clamp(20px, 2.8vw, 50px);
     white-space: nowrap ;
 }
-header a {
-    margin-right: 5%;
+@media only screen and (max-width: 1000px) {
+    nav {
+        flex-grow: 0;
+    }
+    li {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .primary-navigation li {
+        margin-right: 0vw;
+        width: 300px;
+    }
+    header span {
+        font-size: 40px;
+        font-weight: normal;
+    }
+    .primary-navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        flex-direction: column;
+        justify-content: flex-end;
+
+        margin-top: 0px;
+        padding: 10rem 0em 1em 0em;
+        text-align: center;
+        background-color: #382f187a;
+        backdrop-filter: blur(1rem);
+    
+        border-radius: 0 0 0 20px;
+
+        transform: translateX(100%);
+        transition: transform 200ms ease-out;
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        background: url(hamburguer.png) ;
+        background-repeat: none;
+        background-size: cover;
+        width: 5rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;
+    }
+    .mobile-nav-toggle[aria-expanded="true"]{
+        display: block;
+        position: absolute;
+        background: url(X.png) ;
+        background-repeat: none;
+        background-size: cover;
+        width: 5rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;
+    }
 }
+
+
 @font-face {
     font-family: 'Gothica';
     src: url(Fonts/Gothica-Book.ttf) format(truetype);
@@ -78,13 +170,17 @@ header a {
 #headimage {
     max-width: 400px;
 }
+
+footer {
+    margin-top: 50px;
+}
 /* Main Contents */
 .row {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .row {
         flex-direction: column;
         justify-content: flex-start;
@@ -97,10 +193,14 @@ header a {
     width: 100%;
     max-width: 1000px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .column {
         width: 100%;
     }
+}
+#extra {
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 .video-container {
     position: relative;
@@ -109,7 +209,7 @@ header a {
     height: 0;
     overflow: hidden;
     scale: 0.95;
-    box-shadow: 0 0 20px black,0 0 10px black  ; 
+    box-shadow: 0 0 10px black,0 0 10px black; 
     border-radius: 20px;
 }
 .video-container iframe {
@@ -138,10 +238,8 @@ header a {
     width: 80%;
     margin: 0 auto;     /* Auto margin left and right to center the container */
     }
-ul {
 
-}
-ul li{
+#extra ul li{
     margin-bottom: 20px;
     list-style-image: url(star.png);
 }
@@ -174,41 +272,7 @@ ul li{
         align-items: center;
     }
 }
-.centered-text {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
-.passby {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 120px;
-}
-.witchbouncing {
-    animation: witchbounce 2s infinite;
-}
-
-@keyframes witchbounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(50px);
-    }
-  }
 /* */
-#buttonImage {
-    padding: 0;
-    margin: 0;
-    height: auto;
-    width: 100%;
-    position: relative;
-    top: 10px;
-    left: 0px;
-}
 .towerBG-body {
     height: auto;
     width: 100%;
@@ -225,15 +289,10 @@ ul li{
     background-size: 100%;
     min-height: 750px;
 }
-.responsiveimage {
-    width: 100%;
-    flex-grow: 1;
-    object-fit: contain;
-}
-
 a:link {
     color: rgb(255, 162, 24);
     text-decoration: none;
+    cursor: pointer;
 }
   
 a:visited {
@@ -243,34 +302,15 @@ a:visited {
 
 a:hover {
     animation: rainbow 1s linear infinite;
-    cursor:default;
-    cursor: url(Personal/WandCursor_Highlight.gif), auto;
 }
 .center-table {
     margin-left: auto;
     margin-right: auto;
 }
-.sidenav {
-    height: 100%;
-    width: 500px;
-    position: fixed;
-    top: 0;
-    Left: 0;
-    background-color: blue;
-    overflow-x: hidden;
-    padding-top: 60px;
-}
-
-.flyknight-text {
-    font-family: "Press Start 2P", sans-serif;
-}
-
 .index-button { 
     border: none;
     border-radius: 10px;
     transition: width 0.2s ease-out;
-    cursor:default;
-    cursor: url(Personal/WandCursor_Highlight.gif), auto;
     display: flex;
     align-self: center;
     align-items: center;
@@ -283,7 +323,6 @@ a:hover {
     background-position: center;
   }
   .index-button h2{
-    font-size: 20px;
     font-family: "Gothica";
     font-size: 35px;
     text-shadow: 2px 2px 2px #000000ad,-2px -2px 2px #000000ad,0px 0px 10px #000000ad,0px 0px 10px #000000ad;
@@ -292,25 +331,6 @@ a:hover {
   .index-button img{
     margin-right: 20px;
   }
-.index-button-small {
-    font-size: 20px;
-    border: none;
-    border-radius: 20px;
-    transition: width 0.1s ease-out;
-    cursor:default;
-    cursor: url(Personal/WandCursor_Highlight.gif), auto;
-    width: 30%;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -5px 5px 3px #00000081;
-    background-color: rgba(183, 0, 255, 0.575)
-}
-.index-button-small:hover {
-    width: 50%;
-    filter: brightness(150%);
-}
 .button-row {
     display: flex;
     justify-content: space-evenly;
@@ -318,9 +338,6 @@ a:hover {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 90%;
-}
-.button-row .index-button-small {
-    margin: 0 2%;
 }
 .button-iconlink {
     filter: sepia(100);
@@ -351,7 +368,6 @@ a:hover {
     background: none;
     padding: 0;
     margin: 0;
-    cursor: pointer;
 }
 
 
@@ -459,29 +475,12 @@ a:hover {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: width 0.2s steps(3);
-    cursor: pointer;
     display: flex;
     align-items: center;
     width: 200px;
     height: 75px;
     margin-right: 50px;
     box-shadow: -5px 0px 0px #00000079;
-  }
-  .expanding-button-small { 
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 20px;
-    justify-content: flex-end ;
-    margin-left: auto;
-    padding: 0px 0px;
-    border: none;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    width: 75px;
-    height: 75px;
-    margin-left: 25px;
-    box-shadow: 5px 0px 0px #00000079;
   }
   .expanding-button-small img {
     margin: 10px;

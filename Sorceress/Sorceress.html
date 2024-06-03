@@ -8,15 +8,21 @@
   <link rel="stylesheet" href="SorcStyle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap" rel="stylesheet">
 </head>
 <header>
-  <img src="library_logo_transparent_WShadow.png" style="width: 500px; height: auto;margin-left: 50px; margin-top: -40px;">
-  <div>
-  <a><h1>About</h1></a>
-  <a><h1>PressKit</h1></a>
-  <a><h1>Downloads</h1></a>
-  <a><h1>The Devs</h1></a>
-  </div>
+  <img src="library_logo_transparent_WShadow.png" class="logo" >
+  
+  <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
+  
+  <nav class="collapsable-menu">
+    <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+      <li><a href="about"><span>About</span></a></li>
+      <li><a href="presskit"><span>PressKit</span></a></li>
+      <li><a href="Downloads"><span>Downloads</span></a></li>
+      <li><a href="The Devs"><span>The Devs</span></a></li>
+    </ul>
+  </nav>
 </header>
 
 <body>
@@ -81,9 +87,11 @@
         <li><b>Cast</b> elemental magic and mix it to cause chain reactions like electrifying water, freezing a bubble, dousing fire, igniting oil, activate machinery, and more!</li>
         <li><b>Kick</b> your enemies, kick environment objects, even kick a surface to perform a wall-jump!</li>
         <li><b>Improvise</b> with the many tools at your disposal, steal your enemies' weapons to use them or throw them back, push them towards hazards or toss objects at them</li>
-        <div class="video-container">
-          <iframe class="window-border" style="width: 100%; height: 100%; "src="https://www.youtube.com/embed/PbZRmAGZemY?si=jfTpplPl8eMoVmxL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div><br>
+        <div style="margin-left:10vw;margin-right: 10vw;">
+          <div class="video-container">
+              <iframe class="window-border" style="width: 100%; height: 100%; "src="https://www.youtube.com/embed/PbZRmAGZemY?si=jfTpplPl8eMoVmxL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div><br>
+        </div>
         <li><b>Explore the innards of Salguro's Castle</b>, a <b>hand-crafted</b> sprawling environment inhabited by the dangerous minions of <b>The Sulgeri Witches</b></li>
         <li><b>Obtain</b> new weapons, boots, hats and more to <b>customize your loadout</b></li>
         <li><b>Unveil the evil plots of The Sulgeri Witches</b> and get ready to suffer the products of their experiments</li>
@@ -103,7 +111,7 @@
         </div>
       </grid>
     </div>
-    <div class="column" id="socials">
+    <div class="column" id="socials" style="margin-left: 50px;">
         <iframe src="https://discord.com/widget?id=706845680001482813&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" style="max-height: 400px;"></iframe>
         <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/Wabbaboy/status/1712867097636643008?ref_src=twsrc%5Etfw"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/Wabbaboy/status/1720829253808459989?ref_src=twsrc%5Etfw"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -117,8 +125,7 @@
 </footer>
 
 <script src="bouncescript.js"></script>
-<script src="lightning.js"></script>
-<script type="text/javascript" src="sparkles.js"></script>
+<script src="nav.js"></script>
 
 </body>
 

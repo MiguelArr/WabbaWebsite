@@ -29,7 +29,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     font-family: 'Nova Cut', sans-serif;
     background-image: 
         url("Screenshot01.png"),
@@ -45,11 +45,10 @@ header button {
     z-index: 1000;
 }
 .logo {
-    max-width: 500px;
-    min-width: 400px;
+    width: clamp(10px, 80vw, 500px);
     height: auto;
-    margin-left: 50px; 
-    margin-top: -40px;
+    margin-left: 2vw; 
+    margin-top: 0vw;
 }
 
 .primary-navigation {
@@ -108,13 +107,16 @@ header span {
         margin-top: 0px;
         padding: 10rem 0em 1em 0em;
         text-align: center;
-        background-color: #382f187a;
-        backdrop-filter: blur(1rem);
+        background-color: #382218dc;
+        backdrop-filter: blur(0.1rem);
     
         border-radius: 0 0 0 20px;
 
         transform: translateX(100%);
         transition: transform 200ms ease-out;
+    }
+    .logo {
+        margin-top: -60px;
     }
     .mobile-nav-toggle {
         display: block;
@@ -122,9 +124,9 @@ header span {
         background: url(hamburguer.png) ;
         background-repeat: none;
         background-size: cover;
-        width: 5rem;
+        width: clamp(50px, 10vw, 100px);
         aspect-ratio: 1;
-        top: 2rem;
+        top: 2.5rem;
         right: 2rem;
         z-index: 9999;
     }
@@ -168,12 +170,13 @@ header span {
     font-style: italic;
 }
 #headimage {
-    max-width: 400px;
+    width: clamp(1px, 80vw, 400px);
 }
 
 footer {
     margin-top: 50px;
 }
+
 /* Main Contents */
 .row {
     display: flex;
@@ -199,8 +202,8 @@ footer {
     }
 }
 #extra {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    /*margin-left: 5vw;
+    margin-right: 5vw;*/
 }
 .video-container {
     position: relative;
@@ -248,7 +251,7 @@ footer {
     padding: 0;
 }
 #features {
-    max-width: 1500px;
+    max-width: 1200px;
 }
 
 
@@ -399,12 +402,17 @@ a:hover {
     display: inline-block;
     animation: bounce 1s infinite;
     animation-timing-function: linear;
+    font-size: clamp(1px, 6vw, 40px);
 }
 .bouncing-container {
   white-space: nowrap; /* Prevents text from wrapping */
   text-align: center;
   margin: auto;
   max-width: 20%;
+}
+.bouncing-text {
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes rainbow {
@@ -427,44 +435,6 @@ a:hover {
     width: 100%;
     max-width: 600px;
 }
-
-.happyTrail {
-    position: absolute;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 150px solid gold;
-    transform: rotate(deg);
-    border-radius: 50%;
-    opacity: 0.8;
-    pointer-events: none;
-    filter: blur(20px);
-    animation: rainbowFade 1s ease-in;
-    /* Remove or modify the transform property here */
-  }
-  .happyTrail::before {
-    position: absolute;
-    content: '';
-    top: 50px;
-    left: -75px;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 150px solid gold;
-    transform: rotate(-180deg);
-    border-radius: 50%;
-    filter: blur(20px);
-  }
-  
-  @keyframes rainbowFade {
-    0% {
-        color: #ff0;
-        transform: translateY(0px) scale(0.05);
-    }
-    100% {
-        color: rgba(255, 255, 0, 0);
-        transform: translateY(200px) scale(0.0);
-
-    }
-  }
 
   .expanding-button { 
     font-family: "Press Start 2P", sans-serif;

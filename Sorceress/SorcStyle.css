@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 body h1 {
-    font-size: 40px;
+    font-size: clamp(20px, 20vw, 40px);
     font-family: 'Nova Cut', sans-serif;
 }
 body b{
@@ -201,6 +201,7 @@ footer {
         width: 100%;
     }
 }
+
 #extra {
     /*margin-left: 5vw;
     margin-right: 5vw;*/
@@ -251,7 +252,10 @@ footer {
     padding: 0;
 }
 #features {
-    max-width: 1200px;
+    max-width: 800px;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
@@ -373,37 +377,6 @@ a:hover {
     margin: 0;
 }
 
-
-@keyframes bounce {
-    0%, 100% {
-        filter: brightness(1);
-        transform: scale(1);
-    }
-    50% {
-        filter: brightness(1.5);
-        transform: scale(1.1);
-    }
-
-}
-
-@keyframes KSbounce {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    0% { filter: brightness(200%); }
-    50% { filter: brightness(90%); }
-    100% { filter: brightness(200%); }
-}
-
-.letter {
-    display: inline-block;
-    animation: bounce 1s infinite;
-    animation-timing-function: linear;
-    font-size: clamp(1px, 6vw, 40px);
-}
 .bouncing-container {
   white-space: nowrap; /* Prevents text from wrapping */
   text-align: center;
@@ -435,23 +408,6 @@ a:hover {
     width: 100%;
     max-width: 600px;
 }
-
-  .expanding-button { 
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 20px;
-    color: #ffdd25;
-    padding: 0px 0px;
-    border: none;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transition: width 0.2s steps(3);
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: 75px;
-    margin-right: 50px;
-    box-shadow: -5px 0px 0px #00000079;
-  }
   .expanding-button-small img {
     margin: 10px;
   }
@@ -463,4 +419,17 @@ a:hover {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+  }
+  .gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .gif {
+    box-shadow: 0 0 10px black,0 0 10px black; 
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: clamp(200px, 90%,600px);
+    max-width: 600px;
   }

@@ -12,7 +12,7 @@ body {
     font-family: "Convergence", Arial, sans-serif;
     font-weight: normal;
     font-size:  clamp(5px, 1rem + 2vw, 24px);
-    text-shadow: 0.2rem 0.2rem 2px #171535;;
+    text-shadow: 0.2rem 0.2rem 2px #171535;
     overflow-x: hidden;
 }
 body h1 {
@@ -40,6 +40,10 @@ header button {
     padding: 0;
     border: none;
     background: none;
+}
+header a {
+    font-weight: bold;
+    text-decoration: none;
 }
 .collapsable-menu {
     z-index: 1000;
@@ -247,6 +251,10 @@ footer {
     margin-bottom: 20px;
     list-style-image: url(star.png);
 }
+#about ul li{
+    margin-bottom: 20px;
+    list-style-image: url(star.png);
+}
 #socials {
     max-width: 500px;
     padding: 0;
@@ -298,13 +306,11 @@ footer {
 }
 a:link {
     color: rgb(255, 162, 24);
-    text-decoration: none;
     cursor: pointer;
 }
   
 a:visited {
     color: rgb(255, 162, 24);
-    text-decoration: none;
 }
 
 a:hover {
@@ -433,3 +439,159 @@ a:hover {
     width: clamp(200px, 90%,600px);
     max-width: 600px;
   }
+/*About page stuff*/
+#aboutpage {
+}
+#aboutpage img {
+    width: clamp(300px, 50vw, 680px);
+    height: 100%;
+    align-self: center;
+}
+#aboutpage div {
+    padding: 50px;
+}
+#aboutpage ul {
+    max-width: 750px;
+}
+#aboutpage ul li{
+    margin-bottom: 20px;
+    list-style-image: url(star.png);
+}
+/* Developer page stuff */
+.developer-card {
+    position: relative;
+    background-image: radial-gradient(#304955, #18252b);
+    padding: 50px 50px clamp(50px,15vw,150px) 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px black;
+    margin: 40px;
+    border: 3px solid #507b8d36;
+    border-style: dashed;
+    max-width: 1000px;
+}
+.developer-card h2 {
+    font-family: 'Nova Cut', sans-serif;
+}
+.developer-card p {
+    text-align: justify;
+}
+.developer-card p img {
+    border-radius: 20px;
+    float: left;
+    box-shadow: 0px 0px 20px black;
+    margin: -20px 40px 0px 0px;
+}
+.developer-card li {
+    margin-bottom: 20px;
+    margin-left: 40px;
+    list-style-image: url(star.png);
+}
+.developer-socials {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.developer-socials img {
+    width: clamp(20px,10vw,75px);
+    margin: clamp(5px,2vw, 30px);
+}
+.developer-cards-container {
+    display: flex;
+    justify-content: center;
+}
+.developer-cards-grid {
+    display: grid;
+    max-width: 1500px;
+    grid-template-columns: 50% 50%;
+}
+@media only screen and (max-width: 1000px) {
+    .developer-cards-grid {
+        grid-template-columns: 100%;
+    }
+}
+#main-devs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*Press page stuff */
+#presskit {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+#presskit a p {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: clamp(20px,5vw,40px);
+}
+#presskit h1 {
+    font-size: 1px;
+}
+.press-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: radial-gradient(#304955, #18252b);
+    padding: clamp(10px,5vw,40px);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px black;
+    margin: 40px;
+    border: 3px solid #507b8d36;
+    border-style: dashed;
+    max-width: 1300px;
+}
+@media only screen and (max-width: 1000px) {
+    .press-card {
+        flex-direction: column;
+    }
+    .press-card-paragraph {
+        margin-bottom: 40px;
+    }
+}
+.press-card-paragraph {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 30px;
+}
+.press-card a {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+.press-card h1 {
+    text-align: center;
+    font-weight: bold;
+}
+.press-card img {
+    align-self: center;
+    width: clamp(300px, 40vw, 600px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+.fade {
+    animation: fadeIn 1s forwards;
+    pointer-events: none;
+}
+.unfade {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 1;transform: scale(1);}
+    100% { opacity: 0;transform: scale(1);}
+}
+@keyframes fadeOut {
+    0% { opacity: 0;transform: scale(1);}
+    100% { opacity: 1;transform: scale(1);}
+}

@@ -206,10 +206,6 @@ footer {
     }
 }
 
-#extra {
-    /*margin-left: 5vw;
-    margin-right: 5vw;*/
-}
 .video-container {
     position: relative;
     width: 100%;
@@ -320,8 +316,10 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+/* Banner Buttons */
 .index-button { 
-    border: none;
+    border: 3px solid;
+    border-style: groove;
     border-radius: 10px;
     transition: width 0.2s ease-out;
     display: flex;
@@ -361,28 +359,49 @@ a:hover {
 }
 .index-button:hover {
     width: 90%;
-    filter: brightness(150%);
+    filter: none;
 }
 .index-button img {
     vertical-align: middle;
     transition: height 0.5s ease-out;
     height: 80%;
 }
-
 .index-button span {
     margin-left: 2vw;
     margin-right: 2vw;
     line-height: inherit;
     vertical-align: middle;
 }
-
-#actionButton {
+.index-button-small {
+    font-size: 20px;
     border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
+    border-radius: 20px;
+    transition: width 0.1s ease-out;
+    cursor:default;
+    cursor: url(Personal/WandCursor_Highlight.gif), auto;
+    width: 30%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px 5px 3px #00000081;
+    background-color: rgba(183, 0, 255, 0.575)
 }
-
+.index-button-small:hover {
+    width: 50%;
+    filter: brightness(150%);
+}
+.button-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.button-row .index-button-small {
+    margin: 0 2%;
+}
 .bouncing-container {
   white-space: nowrap; /* Prevents text from wrapping */
   text-align: center;
@@ -439,9 +458,11 @@ a:hover {
     width: clamp(200px, 90%,600px);
     max-width: 600px;
   }
-/*About page stuff*/
-#aboutpage {
+#barrelimage {
+    cursor: pointer;
 }
+/*About page stuff*/
+
 #aboutpage img {
     width: clamp(300px, 50vw, 680px);
     height: 100%;

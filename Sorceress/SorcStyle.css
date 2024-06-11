@@ -318,8 +318,6 @@ a:hover {
 }
 /* Banner Buttons */
 .index-button { 
-    border: 3px solid;
-    border-style: groove;
     border-radius: 10px;
     transition: width 0.2s ease-out;
     display: flex;
@@ -461,7 +459,7 @@ a:hover {
 #barrelimage {
     cursor: pointer;
 }
-/*About page stuff*/
+
 
 #aboutpage img {
     width: clamp(300px, 50vw, 680px);

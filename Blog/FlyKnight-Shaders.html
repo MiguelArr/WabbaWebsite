@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧙WabbaBlogs: FlyKnight Shaders</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Croissant+One&family=Press+Start+2P&family=Poetsen+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="fixed-element">
+        <a href="../index.html">
+        <button class="expanding-button" id="aboutButton" style="background-color: #623e83f3;">
+            <img src="../Personal/TowerIcon.gif">
+            <span class="button-text">Back Home</span>
+        </button>
+        </a>
+        <br>
+        <a href="blogshome.html">
+            <button class="expanding-button" id="aboutButton" style="background-color: #262485f6;">
+                <img src="../FlyKnight/grub.gif">
+                <span class="button-text">More Blogs</span>
+            </button>
+        </a>
+    </div>
+    <div class="fixed-element-small">
+        <a href="https://x.com/Wabbaboy" target="_blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/twitter-logo.png">
+            </button>
+        </a>
+        <br>
+        <a href="https://store.steampowered.com/developer/Wabbaboy" target="_blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/Steam_logo.png">
+            </button>
+         </a>
+         <a href="https://wabbaboy.itch.io/" target="blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/itch-io-logo.png">
+            </button>
+        </a>
+        <br>
+        <a href="https://www.youtube.com/@wabbaboy" target="blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/Youtube_logo.png">
+            </button>
+         </a>
+      </div>
+      
+    <header style="height: 100px;">
+        <br><br><br><br><br><br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date of publication: 11 Jun 2024
+    </header>
+
+
+<div class="content">
+<!-- Blog Content -->
+    <div class="blog-content">
+        <div class="centered-text">
+            <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0)">FlyKnight's</h1>
+            <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0); ">SHADERS</h1>
+          </div>
+          <p class="readable-paragraph">
+            In November of 2023 I made a game called FlyKnight for a friendly gamejam. The gamejam lasted 2 whole weeks and the game 
+            was this sort of blend between Shadow Tower Abbyss (a Kings-Fields like) and Dark Souls. It also used old school Runescape-like
+            graphics which is what I want to talk about today.
+          </p>
+            <iframe class="window-border" style="width: 100%; height: 50vw; max-width: 1024px; max-height: 576px;"  src="https://www.youtube.com/embed/vemSrWQUpAU?si=byumOtpCSI2EvEzL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="readable-paragraph">
+            One of the challenges I set to myself was to make the game <strong class="rainbow-text">without textures and lighting</strong>, I thought that it would
+            help recreate the style better and it was an interesting to tackle. <br><br>
+            As always I used Unreal Engine and its rendering method its build with the idea that you will create a pretty realistic game that uses many modern graphic methods, so, by default all materials/shaders in unreal are set up so they have color, specular, roughness,
+            metalness, emissive and normal map, but I don't want none of that, but before we know what we need, lets:
+          </p>
+          <div class="centered-text">
+            <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(0, 179, 250)">Review</h1>
+            <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(0, 179, 250); ">OSRS</h1>
+          </div>
+          <img src="FlyKnight shaders/osrs_1.png">
+          <p class="readable-paragraph">This is a shot of a random cave in Old School Runescape <strong class="rainbow-text"> (OSRS)</strong>, I'm going to list the things I like about it:
+            <ul>
+                <li>Flat colors</li>
+                <li>Everything seems vertex painted, no textures used</li>
+                <li>"Steppy style" shading, very visible on the ground, transitioning from dark to light</li>
+                <li>Low-poly, stylised</li>
+                <li>Sparse use of assets to break monotony like rocks on the ground, mushrooms</li>
+            </ul>
+            <p>Things I don't like:</p>
+           
+            <ul>
+                <li>Steppy shading not visible on the character</li>
+                <li>Lack of depth, all the scene flatly unlit</li>
+                <li>A bit stingy in asset/color variety, could use more vegetation for example</li>
+            </ul>
+            <p class="readable-paragraph">On top of this I have some gripes on other areas of the game, if we take a look at Lumbridge for example:
+</p>
+            <img src="FlyKnight shaders/osrs_2.png">
+            <p class="readable-paragraph">
+            I really dislike the use of textures whenever they are used: the bridge, the castle, the water, the treetops, the rooftops, 
+            I think it's <strong class="bloody-bold">  awful!</strong> <br><br>
+            I understand that the developers didn't feel good about leaving certain surfaces flat or didn't have 
+            the tricount budget to make stylised trees that use more polygons to simulate leafs and branches. But since the game rebooted in 2013 the new areas it has gotten 
+            use mostly flat shaded vertex painted models with no sparse use of polygons when needed which looks very good I think.
+            </p>
+            <img src="FlyKnight shaders/osrs_3.png">
+        </p>
+        <p class="readable-paragraph">
+            So, now that we've reviewed our objectives, let's put things in practise shall we.
+            <div class="centered-text">
+                <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 0, 96)">IMPLEMENTATION</h1>
+            </div>    
+            I'll be starting with this scene, notice that the assets are smooth shaded and sharp edges are rarely used.
+        </p>
+        <img src="FlyKnight shaders/HighresScreenshot00000.png">
+        <p class="readable-paragraph">
+            At the moment this is only using a directional and a skylight which I will now delete. And we 
+            proceed with unlit materials that show only vertex colors, which we've painted either in engine or 
+            in Blender.<br><br>Don't worry too much about the character using higher values in the color, that's made on purpose 
+            so it stands out later.
+        </p>
+
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <img style="max-width: 100%;" src="FlyKnight shaders/HighresScreenshot00001.png">
+            <br>
+            <img style="max-width: 100%;" src="FlyKnight shaders/FK_Shader01.PNG">
+        </div>
+
+    <p>Since we're not using lights or fog, we should address first the problem of Depth Perception, to simulate it 
+        we can start by just making a sphere radius area from our camera.
+    </p>
+
+    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <img style="max-width: 100%;" src="FlyKnight shaders/HighresScreenshot00010.png">
+        <img style="max-width: 100%;" src="FlyKnight shaders/FK_Shader02.PNG">
+    </div>
+
+    <p>The props still look flat, to bring their shading into the mix we can just get the PixelNormalWS on the Blue channel.<br>
+    In the following example, I'm lerping it between 0.5,1 to avoid areas of maximum darkness.</p>
+        
+    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <img style="max-width: 100%;" src="FlyKnight shaders/HighresScreenshot00002.png">
+        <img style="max-width: 100%;" src="FlyKnight shaders/FK_Shader03.PNG">
+    </div>
+    <p>Now for the most important part of the process, the secret sauce, the <strong class="rainbow-text">Steppy style</strong>, and it's very 
+        simple to achieve, we just need to pass our shading mask through this:
+    </p>
+    <img src="FlyKnight shaders/FK_Shader04.PNG">
+    <p>After this you can tweak your mask to your hearts content to get the results you want, I clamped some values
+        and reduced the contrast between the high and low values, and it looks pretty swell.
+    </p>
+    <img src="FlyKnight shaders/HighresScreenshot00006.png">
+    <p>I recommend you use different shaders for characters, props and environment terrain. I like to have a different shader for characters and lerp 
+        the vertex normal WS info with a vector to simulate that they are shaded from a different angle. Or get the distance field 
+        information in the terrain shader to simulate ambient occlusion, it's very versatile!<br><br>
+        I'm aware that some of these things can be achieved with postprocess, but in this project I used Forward shaders, which prevent the use of PP materials, I did this because 
+        I was trying to make a very performant game, didn't quite turn out that way because in 2 weeks I didn't have time to optimise.
+        Oh well.
+        <br><br>
+        Anyway that's all for this blog, I'll do one in the future talking about the framey animation style 
+        and some other stuff too probably. <strong class="rainbow-text"></strong> Peace!
+    </p>
+    
+    
+    
+    
+    
+    
+    </div>
+</div>
+
+<!-- //Blog Content -->
+<footer  class="centered-img" style="flex-direction: column; color: aliceblue;">
+    
+    <p>Denizen of the</p>
+    <div><img src="../Personal/cauldron.gif"><img src="../Personal/badge.gif"><img src="../Personal/cauldron.gif"></div>
+    © Miguel Arroyo<br><br>
+    <div class="spacer"></div>
+  </footer>
+<script src="../bouncescript2.js"></script>
+<script src="../lightning.js"></script>
+<script type="text/javascript" src="../sparkles.js"></script>
+</body>
+</html>

@@ -70,10 +70,10 @@
             was this sort of blend between Shadow Tower Abbyss (a Kings-Fields like) and Dark Souls. It also used old school Runescape-like
             graphics which is what I want to talk about today.
           </p>
-            <iframe class="window-border" style="width: 100%; height: 50vw; max-width: 1024px; max-height: 576px;"  src="https://www.youtube.com/embed/vemSrWQUpAU?si=byumOtpCSI2EvEzL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="window-border" style="width: 100%; height: 50vw; max-width: 1024px; max-height: 576px;align-self: center;"  src="https://www.youtube.com/embed/vemSrWQUpAU?si=byumOtpCSI2EvEzL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <p class="readable-paragraph">
             One of the challenges I set to myself was to make the game <strong class="rainbow-text">without textures and lighting</strong>, I thought that it would
-            help recreate the style better and it was an interesting to tackle. <br><br>
+            help recreate the style better and it was an interesting challenge to tackle. <br><br>
             As always I used Unreal Engine and its rendering method its build with the idea that you will create a pretty realistic game that uses many modern graphic methods, so, by default all materials/shaders in unreal are set up so they have color, specular, roughness,
             metalness, emissive and normal map, but I don't want none of that, but before we know what we need, lets:
           </p>
@@ -161,6 +161,38 @@
         I was trying to make a very performant game, didn't quite turn out that way because in 2 weeks I didn't have time to optimise.
         Oh well.
         <br><br>
+    </p>
+    <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(121, 250, 0)">Some TIPS</h1>
+    </div>   
+    <p>
+        Sometimes, your <strong class="rainbow-text"> Steppy Style</strong> asset might not be working great, maybe because it has too much or too little shading going on, to illustrate my example:
+    </p>    
+    <img style="width: 80%;align-self: center;" src="FlyKnight shaders/Crate_Example.PNG">
+
+    <p>Behold, a crate.<br>
+        I have recreated the shader in Blender for testing purposes and what you're seeing is a crate that's flat shaded and one that's smooth shaded, like this:
+    </p>
+    <img style="width: 80%;align-self: center;" src="FlyKnight shaders/Crate_Example2.PNG">
+    <p>
+        You can probably guess the problem by now, one has no Steppy shader going at all and ther one is too smoothed out, or so I think anyway, so you can play around with 
+        normal modifiers to make the shader behave like you want. Here are 3 examples on how to go about that:
+    </p>
+    <img style="width: 80%;align-self: center;" src="FlyKnight shaders/Crate_Example3.PNG" >
+    <p>Box 1: Uses the Weighted Normals modifier, it's a handy modifier that tries to make flat surfaces flatter, you can have some control by setting up
+        face weights, look into it!
+        <br><br>
+        Box 2: Looks similar to Box 1 but it's actually using the data transfer modifier with Face Corner Data > Custom Normals activated, and, inside of the crate asset there 
+        is a box object, the idea is that the Data Transfer modifier tries to mimick the normals of a different model, in this case, a box, with the Mix Factor slider you can 
+        influence it.
+        <br><br>
+        Box 3: Same deal as Box 2 but the asset it's using to get normals from is a sphere which makes it look forcebly smooth, not saying it's  a 
+        good use case but might be handy for some assets sometimes.
+    </p>
+    <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(0, 117, 250)">Bye bye!</h1>
+    </div>   
+    <p>
         Anyway that's all for this blog, I'll do one in the future talking about the framey animation style 
         and some other stuff too probably. <strong class="rainbow-text"></strong> Peace!
     </p>
@@ -168,10 +200,12 @@
     
     
     
-    
+    <img style="align-self: center;" src="FlyKnight shaders/skeletonanim.gif">
     
     </div>
 </div>
+
+
 
 <!-- //Blog Content -->
 <footer  class="centered-img" style="flex-direction: column; color: aliceblue;">
@@ -184,5 +218,6 @@
 <script src="../bouncescript2.js"></script>
 <script src="../lightning.js"></script>
 <script type="text/javascript" src="../sparkles.js"></script>
+
 </body>
 </html>

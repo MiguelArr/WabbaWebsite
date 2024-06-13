@@ -16,7 +16,7 @@ body {
     font-size:  clamp(5px, 1rem + 2vw, 24px);
     color: #ccccff;
     text-align: left; 
-    text-shadow: 0.2rem 0.2rem 2px #171535;;
+    text-shadow: 0.2rem 0.2rem 2px #171535;
 }
 
 .row {
@@ -482,7 +482,44 @@ a:hover {
     text-align: center;
     margin-bottom: 40px;
 }
+.blog-card {
+    text-shadow: 0.2rem 0.2rem 2px #171535;
+    text-align: left;
+    align-self: center;
+    position: relative;
+    padding: clamp(10px,2vw,40px);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px black;
+    margin: 40px;
+    border: 3px solid #507b8d36;
+    border-style: dashed;
+    max-width: 1000px;
+    cursor:default;
+    cursor: url(Personal/WandCursor_Highlight.gif), auto;
+}
+.blog-card img {
+    width: clamp(100px,30vw,300px);
+    margin-left: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px black;
+}
+.blog-card h1 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 50px);
+}
+.blog-card p{
+    font-size: clamp(10px, 2vw, 30px);
+}
 
+.blog-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.date {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
 footer {
     display: flex;
     flex-direction: row;

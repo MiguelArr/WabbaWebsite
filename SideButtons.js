@@ -19,7 +19,7 @@
         window.location.href = '#play';
     });
     backButton.addEventListener('click', function() {
-        window.location.href = 'https://wabbaboy.neocities.org/';
+        window.location.href = 'index.html';
     })
     followButton.addEventListener('click', function() {
         window.open("https://twitter.com/Wabbaboy", "_blank")

@@ -491,8 +491,8 @@ a:hover {
     border-radius: 20px;
     box-shadow: 0px 0px 20px black;
     margin: 40px;
-    border: 3px solid #507b8d36;
-    border-style: dashed;
+    border: 3px solid #878d5036;
+    border-style: solid;
     max-width: 1000px;
     cursor:default;
     cursor: url(Personal/WandCursor_Highlight.gif), auto;

@@ -582,14 +582,17 @@ footer {
     display: inline-block;
     animation: continuous-marquee2 10s linear infinite;
     animation-delay: 5s;
+    position: relative;
+    left: 400px;
 }
 @keyframes continuous-marquee1 {
-    0% {transform: translateX(100%);}
-    100% {transform: translateX(-100%);}
+    0% {transform: translateX(150%);}
+    100% {transform: translateX(-150%);}
 }
 @keyframes continuous-marquee2 {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(-200%);}
+    0% {transform: translateX(50%);left: 0px;}
+    100% {transform: translateX(-250%);left: 0px;}
+
 }
 
 .WhatsNewDate {

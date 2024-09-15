@@ -24,7 +24,7 @@ body {
     flex-direction: row;
     justify-content: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .row {
         flex-direction: column;
         justify-content: flex-start;
@@ -39,7 +39,15 @@ body {
     width: 40%;
     align-items: center;
 }
-@media (max-width: 800px) {
+.sidecolumn {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 600px;
+    width: 40%;
+    align-items: center;
+}
+@media (max-width: 1000px) {
     .column {
         width: 100%;
     }
@@ -47,7 +55,7 @@ body {
 .spacer {
     height: 0px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .spacer {
         height: 0px;
     }
@@ -57,7 +65,7 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .blog-row {
         flex-direction: column;
         justify-content: flex-start;
@@ -550,7 +558,8 @@ footer {
     }
 }
 .scrollable-list {
-    max-height: 150px;
+    border: 2px dashed #ffd9003d;
+    max-height: 250px;
     margin: 0px;
     padding: 0px;
 }
@@ -600,3 +609,38 @@ footer {
     align-items: center;
     background-color: #053373;
 }
+.circle {
+    position: relative; /* Allows movement without affecting layout */
+    right: -200px;
+  }
+@keyframes moveUpDown
+ {
+    0%,100%{
+        transform: translateY(-25px);
+      }
+    50% {
+        transform: translateY(25px);
+      }
+  }
+  @keyframes moveLeftRight
+ {
+    0%,100%{
+        transform: translateX(0px);
+      }
+    33% {
+        transform: translateX(25px);
+      }
+    66% {
+        transform: translateX(-25px);
+      }
+  }
+  .collapsable {
+    padding: 0px;
+    margin: 0px;
+    width: 500px;
+  }
+  @media (max-width: 2000px) {
+    .sidecolumn {
+      display: none;
+    }
+  }

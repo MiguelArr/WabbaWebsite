@@ -210,10 +210,10 @@ a:hover {
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 90%;
+    width: 95%;
 }
 .button-row .index-button-small {
-    margin: 0 2%;
+    margin: 0 1%;
 }
 .button-iconlink {
     filter: sepia(100);

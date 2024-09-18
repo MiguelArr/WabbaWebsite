@@ -625,13 +625,13 @@ footer {
   @keyframes moveLeftRight
  {
     0%,100%{
-        transform: translateX(0px);
+        transform: translateX(-75px);
       }
     33% {
-        transform: translateX(25px);
+        transform: translateX(-50px);
       }
     66% {
-        transform: translateX(-25px);
+        transform: translateX(-100px);
       }
   }
   .collapsable {

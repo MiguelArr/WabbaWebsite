@@ -291,3 +291,13 @@ border-bottom: 0.3vw solid #ffdd25;
       display: none;
   }
 }
+
+.anticipation {
+  background-image: url(FlyKnight/DarkBG.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: local;
+  z-index: -2;
+}

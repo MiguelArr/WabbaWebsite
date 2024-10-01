@@ -482,7 +482,6 @@ a:hover {
 .blog-content {
     width: 100%;
     float: left;
-
     font-family: "Convergence", Arial, sans-serif;
     font-weight: bold; /* or bold */
     font-size:  clamp(5px, 1rem + 2vw, 24px);
@@ -499,11 +498,12 @@ a:hover {
     text-align: left;
     align-self: center;
     position: relative;
-    padding: clamp(10px,2vw,40px);
+    padding-left: clamp(10px,2vw,40px);
+    padding-right: clamp(10px,2vw,40px);
     border-radius: 20px;
     box-shadow: 0px 0px 20px black;
-    margin: 40px;
-    border: 3px solid #878d5036;
+    margin: 10px;
+    border: 3px solid #8d505036;
     border-style: solid;
     max-width: 1000px;
     cursor:default;
@@ -511,16 +511,20 @@ a:hover {
 }
 .blog-card img {
     width: clamp(100px,30vw,300px);
-    margin-left: 30px;
+    height: clamp(100px,30vw,300px);
+    margin: 50px 0px 0px 15px;
     border-radius: 30px;
     box-shadow: 0px 0px 10px black;
+    align-self: center;
 }
+
 .blog-card h1 {
     text-align: center;
     font-size: clamp(30px, 5vw, 50px);
 }
 .blog-card p{
-    font-size: clamp(10px, 2vw, 30px);
+    text-align: justify;
+    font-size: clamp(20px, 2vw, 30px);
 }
 
 .blog-card-info {

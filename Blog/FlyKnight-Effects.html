@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧙WabbaBlogs: FlyKnight Shaders</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Croissant+One&family=Press+Start+2P&family=Poetsen+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="fixed-element">
+        <a href="../index.html">
+        <button class="expanding-button" id="aboutButton" style="background-color: #623e83f3;">
+            <img src="../Personal/TowerIcon.gif">
+            <span class="button-text">Back Home</span>
+        </button>
+        </a>
+        <br>
+        <a href="blogshome.html">
+            <button class="expanding-button" id="aboutButton" style="background-color: #262485f6;">
+                <img src="../FlyKnight/grub.gif">
+                <span class="button-text">More Blogs</span>
+            </button>
+        </a>
+    </div>
+    <div class="fixed-element-small">
+        <a href="https://x.com/Wabbaboy" target="_blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/twitter-logo.png">
+            </button>
+        </a>
+        <br>
+        <a href="https://store.steampowered.com/developer/Wabbaboy" target="_blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/Steam_logo.png">
+            </button>
+         </a>
+         <a href="https://wabbaboy.itch.io/" target="blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/itch-io-logo.png">
+            </button>
+        </a>
+        <br>
+        <a href="https://www.youtube.com/@wabbaboy" target="blank">
+            <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
+                <img src="../Personal/Youtube_logo.png">
+            </button>
+         </a>
+      </div>
+      
+    <header style="height: 100px;">
+        <br><br><br><br><br><br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date of publication: 21 Feb 2025
+    </header>
+
+
+<div class="content">
+<!-- Blog Content -->
+    <div class="blog-content">
+        <div class="centered-text">
+            <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(0, 100, 250)">FlyKnight's</h1>
+            <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(0, 100, 250); ">EFFECTS</h1>
+          </div>
+          <p class="readable-paragraph">
+            I recently released my first game, FlyKnight, and one of the things people have been enjoying is the little funky spell effects it has. I had a lot of
+             fun making them and it's a rather easy process so I wanted to go through it and show y'all.
+          </p>
+        <div class="video-grid">
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/Flyknight - 2025-02-10 9-29-46 Pm-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/Flyknight - 2025-02-10 9-30-39 Pm-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/Flyknight - 2025-02-10 9-32-32 Pm-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/Flyknight - 2025-02-10 9-33-04 Pm-4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="readable-paragraph">
+            But why would you want to do this in the first place? Depending on the use case you might not need or want to do it but here is what I think: 
+            </p>
+        <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(162, 250, 0); ">PROS</h1>
+        </div>
+        <ul>
+            <li>Looks cool and funky</li>
+            <li>It's like a particle effect but in 3D space, looks good from any angle</li>
+            <li>No need to use bones, which are a hassle to set up and resource-intensive</li>
+            <li>More control over movement of individual vertices</li>
+        </ul>
+    <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 37, 0); ">CONS</h1>
+        </div>
+        <ul>
+            <li>Models with a lot of vertices can create really large and unwieldy files</li>
+            <li>Contains no data that the engine can use for collision/hitbox</li>
+            <li>Some engines might not be able to handle well alembic files</li>
+        </ul>
+        <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0); ">TOOLS</h1>
+        </div>
+        <p class="readable-paragraph">
+            For this endeavour we will be using the almighty <strong class="bloody-bold">  blender</strong>, savior of 3D editing software. And a little plugin called AnimAll which allows us
+            to save vertex data on a keyframe to be able to animate things without bones.
+            <br><br>
+            I recommend looking into a tutorial about AnimAll, I will walk you through my process but it's going to help you to know the ins and 
+            outs of it.
+            <br><br>
+            In this example I'll start with this model of roots, I'll be showing the spell from the 3rd video in which roots come out of the ground.
+            <br><br><image style="display: block;margin: auto;" src="FlyKnight effects/Roots.png"></image>
+            <br><br>We want the roots to come out doing a swirl, to give them personality, so I made a curve/spline that they will follow: 
+            <br><br><image style="display: block;margin: auto;" src="FlyKnight effects/Roots_Curve.png"></image>
+            <br><br>With the Curve modifier we can make our model follow the spline. Notice that in this case the roots are "textured", actually they are just 
+            using vertex colors, but you can use any sort of model with your shading style of choice.
+            <br><br><image style="display: block;margin: auto;" src="FlyKnight effects/Roots_Curve2.png"></image>
+            <br><br>Now, to convey that the roots are rising from the ground we 
+            need to animate them, and we will animate both the root and the spline, first we start with the simple stuff, for the root to come out 
+            following the spline and have some pizzazz, I just raise it on the Z axis and also rotate it while it does so. Notice how it already 
+            looks quite cool just following the spline we made:
+            <br><br><video style="display: block;margin: auto;" width="640" height="360" controls>
+                <source src="FlyKnight effects/RootsMovement.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br><br>And now we can combine this with the AnimAll plugin to also straighten the spline and add a stabbing motion to this roots model:
+            <br><br><video style="display: block;margin: auto;" width="640" height="360" controls>
+                <source src="FlyKnight effects/RootsMovement_Spline.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br><br>Using the AnimAll plugin is easy, we just need to select the points in our spline, then check Points, click Insert to create a keyframe,
+             and then we move to a new keyframe, set our points in a new position and "Insert" a new keyframe, if we get back from editing mode we can see 
+             the result in action:
+             <br><br><image style="display: block;margin: auto;" src="FlyKnight effects/Roots_Curve_AnimAll1.png"></image>
+             <br><br><image style="display: block;margin: auto;" src="FlyKnight effects/Roots_Curve_AnimAll2.png"></image>
+             <br><br><video style="display: block;margin: auto;" width="640" height="360" controls>
+                <source src="FlyKnight effects/RootSpline_Animated.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br><br>Finally we select the model and export it as Alembic, once brought into Unreal or your engine of choice it's likely that the 
+            scale will be all wrong and you need to scale it up by 100 or something like that. These are the export/import settings I use from Blender 
+            to Unreal:
+            <div class="video-grid">
+            <image style="display: block;margin: auto;" src="FlyKnight effects/BlenderExport.png"></image>
+            <image style="display: block;margin: auto;" src="FlyKnight effects/Unrealimport.png"></image>
+            </div>
+        </p>
+        <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(137, 0, 250); ">EXAMPLES</h1>
+        </div>
+        <p class="readable-paragraph">
+            Here are some other examples, I will not go into detail but several of these have models that grow and shrink in size while having a uniform polycount, 
+            this can all be achieved with the AnimAll plugin + the remesh modifier. The problem with the remesh modifier is that it deletes vertex painting
+             information so you'll need to set the colors through shaders in-engine. Another problem it has is that if the engine detects that your model has 
+             0 vertices at some point, it might not import it at all! So you always need to have a little bit of model at all times.
+        </p>
+        <div class="video-grid">
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 09{10} (2)-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 09{10}-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 14{10}-9.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 16{10}-8.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 17{10}-7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 18{10}-6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 21{10}-5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 22{10}-4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video width="640" height="360" controls>
+                <source src="FlyKnight effects/02 21 25 12 23{10}-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    <div class="centered-text">
+        <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(0, 117, 250)">Bye bye!</h1>
+    </div>   
+    <p>
+        That's gonna be it for this one, hope you found it inspiring and cool, it really is a very easy and fun process that can spice up things. <strong class="rainbow-text"></strong> Peace!
+    </p>
+    
+    
+    
+    
+    <img style="align-self: center;" src="FlyKnight effects/MAGE-.GIF">
+    
+    </div>
+</div>
+
+
+
+<!-- //Blog Content -->
+<footer  class="centered-img" style="flex-direction: column; color: aliceblue;">
+    
+    <p>Denizen of the</p>
+    <div><img src="../Personal/cauldron.gif"><img src="../Personal/badge.gif"><img src="../Personal/cauldron.gif"></div>
+    © Miguel Arroyo<br><br>
+    <div class="spacer"></div>
+  </footer>
+<script src="../bouncescript2.js"></script>
+<script src="../lightning.js"></script>
+<script type="text/javascript" src="../sparkles.js"></script>
+
+</body>
+</html>

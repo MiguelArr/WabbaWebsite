@@ -1,32 +1,35 @@
-    // Get references to the buttons
-    var aboutButton = document.getElementById('aboutButton');
-    var creditsButton = document.getElementById('creditsButton');
-    var audio = document.getElementById("audioPlayer");
-    var playPauseButton = document.getElementById("playPauseButton");
-    var playIcon = document.getElementById("playIcon");
-    var buttonText = playPauseButton.querySelector(".button-text");
-    var audio = document.getElementById("audioPlayer");
-    audio.volume = 0.333;
-    // Add event listeners to the buttons
+// Get references to the buttons
+var aboutButton = document.getElementById('aboutButton');
+var creditsButton = document.getElementById('creditsButton');
+var playPauseButton = document.getElementById('playPauseButton');
+var playIcon = document.getElementById('playIcon');
+var buttonText = playPauseButton.querySelector(".button-text");
+var audio = document.getElementById("audioPlayer");
 
+audio.volume = 0.333;
+
+// Check if audio element exists
+if (!audio) {
+    console.error("Audio element not found!");
+}
+
+// Add event listeners to the buttons
+if (aboutButton) {
     aboutButton.addEventListener('click', function() {
         window.location.href = '#about';
     });
+}
+
+if (creditsButton) {
     creditsButton.addEventListener('click', function() {
         window.location.href = '#credits';
     });
-    playButton.addEventListener('click', function() {
-        window.location.href = '#play';
-    });
-    backButton.addEventListener('click', function() {
-        window.location.href = 'index.html';
-    })
-    followButton.addEventListener('click', function() {
-        window.open("https://twitter.com/Wabbaboy", "_blank")
-    })
+}
+
+if (playPauseButton) {
     playPauseButton.addEventListener("click", function() {
         if (audio.paused) {
-            audio.play();
+            audio.play().catch(error => console.error("Playback failed: ", error));
             playIcon.src = "FlyKnight/Piranha.gif";
             buttonText.textContent = "Pause Music";
         } else {
@@ -35,8 +38,6 @@
             buttonText.textContent = "Play Music";
         }
     });
-    futureButton.addEventListener('click', function() {
-        window.location.href = '#future';
-    });
-
-    
+} else {
+    console.error("PlayPauseButton not found!");
+}

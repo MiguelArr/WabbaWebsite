@@ -2,22 +2,7 @@
     <html>
         <!-- HTML Meta Tags -->
     <title>🐜FlyKnight⚔️</title>
-    <meta name="description" content="FlyKnight is a Kings Field inspired bug-themed dungeon crawler with Runescape-style graphics">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://wabbaboy.neocities.org/FlyKnight">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="🐜FlyKnight⚔️">
-    <meta property="og:description" content="FlyKnight is a Kings Field inspired bug-themed dungeon crawler with Runescape-style graphics">
-    <meta property="og:image" content="https://wabbaboy.neocities.org/Games/FlyKnight/FlyThumb_2.png">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="wabbaboy.neocities.org">
-    <meta property="twitter:url" content="https://wabbaboy.neocities.org/FlyKnight">
-    <meta name="twitter:title" content="🐜FlyKnight⚔️">
-    <meta name="twitter:description" content="FlyKnight is a Kings Field inspired bug-themed dungeon crawler with Runescape-style graphics">
-    <meta name="twitter:image" content="https://wabbaboy.neocities.org/Games/FlyKnight/FlyThumb_2.png">
+    <meta name="description" content="FlyKnight is a Kings Field inspired bug-themed dungeon crawler with Retro-style graphics">
 
 <head>
     <meta charset="UTF-8">
@@ -34,19 +19,19 @@
 </head>
 
 <div class="fixed-element">
-    <button class="expanding-button" id="aboutButton" style="background-color: #7f2b1c;">
+    <button class="expanding-button" style="background-color: #7f2b1c;" onclick="location.href='#about'">
         <img src="FlyKnight/grub.gif" style="transform: scaleX(-1)">
         <span class="button-text">About</span>
         </button>
     <br>
-    <button class="expanding-button" id="creditsButton" style="background-color: #7f651c;">
+    <button class="expanding-button" style="background-color: #7f651c;" onclick="location.href='#getGame'">
         <img src="FlyKnight/FlyBoy.gif">
-        <span class="button-text">Credits</span>
+        <span class="button-text">Get the Game</span>
     </button>
     <br>
-        <button class="expanding-button" id="playButton" style="background-color: #407f1c;">
+        <button class="expanding-button" style="background-color: #407f1c;" onclick="location.href='#specs'">
         <img src="FlyKnight/pooti.gif">
-        <span class="button-text">Get the Game</span>
+        <span class="button-text">Specs</span>
     </button>
     <br>
     <button class="expanding-button" id="playPauseButton" style="background-color: #1c7c7f;">
@@ -54,17 +39,17 @@
     <span class="button-text">Play Music</span>
     </button>
     <br>
-    <button class="expanding-button" id="backButton" style="background-color: #261c7f;">
+    <button class="expanding-button" id="backButton" style="background-color: #261c7f;" onclick="location.href='#getOST'">
         <img src="FlyKnight/Luna.gif">
-        <span class="button-text">Go<br>back</span>
+        <span class="button-text">Get the OST</span>
     </button>
     <br>
-    <button class="expanding-button" id="followButton" style="background-color: #5e1761;">
+    <button class="expanding-button" id="followButton" style="background-color: #5e1761;" onclick="location.href='#credits'">
         <img src="FlyKnight/PillBug.gif">
-        <span class="button-text">Follow<br>me</span>
+        <span class="button-text">Credits</span>
     </button>
     <br>
-    <button class="expanding-button" id="futureButton" style="background-color: #202020;">
+    <button class="expanding-button" id="futureButton" style="background-color: #202020;" onclick="location.href='#theFuture'">
         <img src="FlyKnight/moon.gif">
         <span class="button-text">The<br>Future</span>
     </button>
@@ -137,7 +122,7 @@
         </p>
     </div>
 
-    <div class="centered-text" id="about">
+    <div class="centered-text">
         <span class="bouncing-text">Summon...</span> 
     </div>
     <div class="centered-text">
@@ -150,7 +135,7 @@
         </p>
     </div>
 
-    <div class="centered-text" id="about">
+    <div class="centered-text">
         <span class="bouncing-text">Venture deep</span> 
     </div>
     <div class="centered-text">
@@ -168,7 +153,7 @@
     
     <br><br>
         
-        <div id="play" class="centered-text">
+        <div id="getGame" class="centered-text">
             <h1 class="bouncing-text">Can I play it!?</h1>
         </div>
         <div style="text-align: center;">
@@ -179,18 +164,25 @@
             <div class="centered-text">
              <h1 class="bouncing-text">Specs</h1>
          </div>
-        <div><p style="text-align: justify;"><img src="FlyKnight/wizard.gif" width="200" height="300px" class="image-adyacent-left">
+        <div id="specs"><p style="text-align: justify;"><img src="FlyKnight/wizard.gif" width="200" height="300px" class="image-adyacent-left">
             FlyKnight doesn't use textures, dynamic lighting or fancy modern effects like Lumen, RTX or Nanite, but it was made in the <strong class="rainbow-bold">Unreal Engine</strong> which isn't exactly lightweight. 
              <br><br>Some areas of the game can be a bit heavy on the CPU due to high amounts of enemies, but it's rare to see it dip below 30FPS in older computers.
              <br><br>That said, many users have reported crashes when interacting with lootable items in computers that use very old GPUs and/or intel ark GPUs, a potential fix for this issue can be found <a href="https://steamcommunity.com/app/3108510/discussions/0/596265621109394693/" target="_blank">Here</a>.</p>
         </div>
         <br><br><br><br>
 
-        <div class="centered-text">
+        <div id="getOST" class="centered-text">
+            <h1 class="bouncing-text">Soundtrack</h1>
+        </div>
+        <div  class="centered-text">
+            <p class="centered-text">
+                You can grab the OST for <strong class="bloody-bold">only $3!!!</strong> <br>Check out <a href="https://michips.bandcamp.com/album/flyknight-original-soundtrack" target="_blank">Michi's Bandcamp Page.</a>
+            </p>
             <img class="centered-text" src="FlyKnight/grub.gif">
         </div>
 
-        <iframe style="border: 2; width: 400px; height: 836px;" src="https://bandcamp.com/EmbeddedPlayer/album=2519295231/size=large/bgcol=333333/linkcol=e99708/transparent=true/" seamless><a href="https://michips.bandcamp.com/album/flyknight-original-soundtrack">FlyKnight (Original Soundtrack) by Michi VGC</a></iframe>        <div id="credits" class="centered-text">
+        <iframe style="border: 2; width: 400px; height: 836px;" src="https://bandcamp.com/EmbeddedPlayer/album=2519295231/size=large/bgcol=333333/linkcol=e99708/transparent=true/" seamless><a href="https://michips.bandcamp.com/album/flyknight-original-soundtrack">FlyKnight (Original Soundtrack) by Michi VGC</a></iframe>
+        <div id="credits" class="centered-text">
             <h1 class="bouncing-text">CREDITS</h1>
         </div>
         <div class="centered-text">
@@ -220,12 +212,6 @@
                     <td>Docs</td>
                 </tr>
                 <tr>
-                    <td>Animations</td>
-                    <td>A$$et Packs</td>
-                    <td><a href="https://www.kubold.com/" target="_blank">kubold.com</td>
-                    <td>Unknown</td>
-                </tr>
-                <tr>
                     <td>Sound&VFX</td>
                     <td>Wabbaboy</td>
                     <td><a href="https://twitter.com/Wabbaboy" target="_blank">Twitter</td>
@@ -243,13 +229,38 @@
                     <td><a href="https://wabbaboy.dev/" target="_blank">Website</td>
                     <td>UE4</td>
                 </tr>
+                <tr>
+                    <td>Animations 1</td>
+                    <td>A$$et Packs</td>
+                    <td><a href="https://www.fab.com/sellers/Kubold" target="_blank">Fab/Kubold</td>
+                    <td>Unknown</td>
+                </tr>
+                <tr>
+                    <td>Animations 2</td>
+                    <td>A$$et Packs</td>
+                    <td><a href="https://www.fab.com/sellers/Kevin%20Animation" target="_blank">Fab/KevAnimation</td>
+                    <td>Unknown</td>
+                </tr>
             </table>
         </div>
     </div>
 
-    <div class="centered-text">
-        <a href="https://twitter.com/Wabbaboy" target="_blank">Follow Me</td>
+    <div class="centered-text" id="theFuture">
+        <h1 class="bouncing-text">The Future</h1>
     </div>
+    <div>
+        <p style="text-align: center;">
+            <a href="https://store.steampowered.com/news/app/3108510/view/520830071182724497?l=english" target="_blank">An announcement regarding the future of FlyKnight can be read here.</a>
+        </p>
+    </div>
+
+
+    <br><br><br>
+    <footer  class="centered-text" style="flex-direction: column; color: rgb(248, 223, 0);">
+        © Miguel Arroyo<br><br>
+        <div class="spacer"></div>
+      </footer>
+
     <br><br><br>
     <script src="bouncescript.js"></script>
     <script src="SideButtons.js"></script>

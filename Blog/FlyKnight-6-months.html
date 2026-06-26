@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>🧙WabbaBlogs: FlyKnight Shaders</title>         
+        <link rel="stylesheet" href="../style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Croissant+One&family=Press+Start+2P&family=Poetsen+One&display=swap" rel="stylesheet"> 
+    </head>     
+    <body> 
+        <div class="fixed-element"> <a href="../index.html"> <button class="expanding-button" id="aboutButton" style="background-color: #623e83f3;"> 
+                    <img src="../Personal/TowerIcon.gif"> <span class="button-text">Back Home</span> 
+                </button> </a> <br> <a href="blogshome.html"> <button class="expanding-button" id="aboutButton" style="background-color: #262485f6;"> 
+                    <img src="../FlyKnight/grub.gif"> <span class="button-text">More Blogs</span> 
+                </button> </a> 
+        </div>         
+        <div class="fixed-element-small"> <a href="https://x.com/Wabbaboy" target="_blank"> <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);"> 
+                    <img src="../Personal/twitter-logo.png"> 
+                </button> </a> <br> <a href="https://store.steampowered.com/developer/Wabbaboy" target="_blank"> <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);"> 
+                    <img src="../Personal/Steam_logo.png"> 
+                </button> </a> <a href="https://wabbaboy.itch.io/" target="blank"> <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);"> 
+                    <img src="../Personal/itch-io-logo.png"> 
+                </button> </a> <br> <a href="https://www.youtube.com/@wabbaboy" target="blank"> <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);"> 
+                    <img src="../Personal/Youtube_logo.png"> 
+                </button> </a> 
+        </div>         
+        <header style="height: 100px;"> <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date of publication: 30 Jul 2025
+        </header>         
+        <div class="content"> 
+            <!-- Blog Content -->             
+            <div class="blog-content"> 
+                <div class="centered-text"> 
+                    <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0)">Making FlyKnight</h1> 
+                    <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0); ">In 6 months</h1> 
+                </div>                 
+                <p class="readable-paragraph"> 
+It has been 6 months since FlyKnight released so it seems fitting to look back at the 6 months of development and analyze what went right, what went wrong and the many misfortunes that happened along the development cycle.<br><br>
+Sorry to escalate this quickly so soon but I ought to advise that some very personal events will be talked about briefly which contain death and suicide topics, I will try my best to not dwell on them and keep it brief and relevant for what did affect FlyKnight, sadly these events are important and cannot be ignored for the topic at hand. </p> 
+                <iframe class="window-border" style="width: 100%; height: 50vw; max-width: 1024px; max-height: 576px;align-self: center;" src="https://www.youtube.com/embed/vemSrWQUpAU?si=byumOtpCSI2EvEzL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                 
+                <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0); ">FlyKnight's Inception</h1>
+                <p> 
+FlyKnight started as a 2-week long gamejam project in November of 2023, I teamed up with Squareanon (the artist) and Michi (the musician). I mostly grinded pretty hard during those 2 weeks mostly because I was having A LOT of fun with this project. Earlier that year I had been playing Old School Runescape for the first time in my life and found it to be a very comfortable and satisfying experience, moreover I was puzzled at the fact that most 3D indie developers were doing PSX style retro graphics but none were delving on the vertex color charm of some other old PC games and even a lot of PSX games.</p>
+                <p>
+Making a game without using textures and lighting seemed fun, easy and nobody else was doing it so, seemed like a cool idea. On top of that I had started really getting into action dungeon crawlers, particularly From Software's Output for the PS2, those being Eternal Ring, Shadow Tower Abbyss and Kings Field 4. I yearned for games with slower methodical combat which is a direction FromSofts themselves have been gradually divorcing from after Demon's and the first Dark Souls.</p>
+                <p> 
+The gamejam went well, the game was getting A LOT of attention on twitter, I wasn't too surprised about this, people love retro graphics (me included) and this felt pretty fresh, it was a good combo of a unique artstyle, a gameplay not often seen in mainstream media and an interesting world populated with bugs and carnivorous plants. The game itself was ok, I'm very proud of it, for a thing that took 2 weeks to make it was like 40 minutes long, had variety in its level design and a boss at the end, you really can't ask for more for a gamejam project.<br>
+After that I simply shelved it and didn't think much about it. "Would be cool to revisit after I'm done with Sorceress" I thought.</p>
+                <p> 
+Some amount of time later while I was grinding on Sorceress I had a couple of invasive thoughts, one of them was that it didn't seem too far into the future that I would run out of money. The Kickstarter for Sorceress had met its goal but progress on the project was far slower than I was expecting and slowly but surely I was burning through the funds merely by subsisting which was becoming increasingly annoying. One of the reasons I made that campaign was to be able to pay people to help me with the project but with no end in sight for an Early Access version I simply couldn't use the funds freely on contractor work, which was quite annoying.</p> 
+                <p>
+    Way I saw it there were two options:<br>
+    Grind Sorceress even harder and get to an Early Access state, try to make some cash with that. Main problem with that is that EA can be a quite a muddy territory to tread through. Often EA projects fail because development isn't fast enough and players grow impatient and hostile, which greatly affects morale.<br>
+    Option number two was to revive FlyKnight and try to make a game that would be worth some amount of money and get some income out of it, no matter how small.</p>
+                <p>
+    But if I were to pivot to this I had to do it responsably, I was putting on hold the backers of Sorceress and they simply shouldn't be waiting forever. For a few weeks, in my spare time, I took FlyKnight and experimented with it: followed a tutorial to add an inventory, added spells, bow and arrows, fishing, some more weapon types and online multiplayer, everything in a rough way just to test the waters. Did a few tests with my friends, seemed like things worked to some extent, but most importantly it simply felt fun to crawl in da dungeon with your pals, it showed a lot of potential.</p>
+                <h1 class="bouncing-text" style="font-family: Poetsen One;color: rgb(250, 112, 0); ">The Plan</h1>
+                <p>I thought to myself "I've done a 40 minute-long game in 2 weeks, surely I can make a 2-3 hour long game in two months" so I drafted a schedule for the months of August and September of 2024, it roughly said that I were to spend every week of August working on a level and every week of September working on a boss, with a free week in each month for polish and taking care of other features, FlyKnight was pretty much feature complete at that point, just to be safe I had asumed that I wouldn't be done with EVERYTHING but I was like "I'll finish up in my spare time, it'll likely be a couple things". Even saying that cautiously it ended up being extremely naive and optimistic. </p>
+                    <br>
+                    I did get a lot done on those 2 months: 
+                    <ul>
+                <li>Expanding the Caves level was an easy task</li>
+                <li>Making the Swamp had a lot of challenges and remained half-done after its alloted week</li>
+                <li>The Ruins level got 3/4ths of the way there (right before getting to the Cathedral)</li>
+                <li>Carnivore Plant Boss got started but it also had a lot of challenges going on and remained unfinished</li>
+                <li>Kalim bossfight pretty much got started and finished right there and then</li>
+                <li>Lunamoth bossfight got expanded from the gamejam version but not as much as I would've liked</li>
+                </ul>
+                <p>To this it should be added the work that Square, Michi and Yorke made, they pretty much started and finished almost all of their work which I had drafted in a document and I acted as director for them.</p>
+               <p> I don't consider myself a solo developer, obviously, but I'm not sure I would call the way this game got made a "collaborative indie effort".<br> To me it felt like I was outsourcing what I needed as I worked individually with each person, which sounds quite cold but in reality I believe each of them loved how the game was coming along and they felt passionate about it, I gave minimal direction and listened to ideas, left each person to cook on their own terms and I was almost always grateful and happy with the result.<br><br>
+                The one exception to this is my long time friend Yorke which has been working with me in Sorceress and is the person I bounce ideas back and forth from.It seems like I am extremely lucky to surround myself with people this talented and artistically driven that were the perfect match for the game. But I did plan their tasks ahead, worked with them individually and they got paid afterwards. <br>
+                Maybe this is my experience in the industry showing through or maybe is what I felt the game needed to get done in time, either way it worked out!</p>
+                <div class="centered-text"> 
+                    <h1>TITLE</h1> 
+                    <h1>TEST</h1> 
+                </div>                 
+                <img src="FlyKnight shaders/osrs_1.png"> 
+                <p class="readable-paragraph">Paragraph TestParagraph Test <strong class="rainbow-text"> Paragraph Test </strong><strong class="bloody-bold">Paragraph Test</strong> <ul> 
+                        <li>A</li>                         
+                        <li>List</li>                         
+                        <li>With</li>                         
+                        <li>Things</li>                         
+                    </ul>  
+            </div>             
+        </div>         
+        <!-- //Blog Content -->         
+        <footer class="centered-img" style="flex-direction: column; color: aliceblue;"> 
+            <p>Denizen of the</p> 
+            <div>
+                <img src="../Personal/cauldron.gif">
+                <img src="../Personal/badge.gif">
+                <img src="../Personal/cauldron.gif">
+            </div>             
+            © Miguel Arroyo<br>
+            <br> 
+            <div class="spacer"></div>             
+        </footer>         
+        <script src="../bouncescript2.js"></script>         
+        <script src="../lightning.js"></script>         
+        <script type="text/javascript" src="../sparkles.js"></script>         
+    </body>     
+</html>

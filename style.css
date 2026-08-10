@@ -691,6 +691,7 @@ footer {
     border-radius: 3px;
     margin-bottom: 12px;
     break-inside: avoid; /* stops an image from splitting across two columns */
+    box-shadow: 5px 5px 2px #00000081;
 }
 .PhotoGallery img:hover {
     filter: brightness(120%);

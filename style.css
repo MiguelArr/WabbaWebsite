@@ -678,3 +678,100 @@ footer {
         grid-template-columns: 1fr;
     }
   }
+.PhotoGallery {
+    column-count: 4;
+    column-gap: 12px;
+}
+
+.PhotoGallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+    break-inside: avoid; /* stops an image from splitting across two columns */
+}
+.PhotoGallery img:hover {
+    filter: brightness(120%);
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+    padding: 20px;
+}
+.lightbox.active {
+    display: flex;
+}
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 34px;
+    color: #fff;
+    cursor: pointer;
+}
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    user-select: none;
+}
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-arrow:hover { color: #ffdd25; }
+
+.tab-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.tab-btn {
+    padding: 20px 100px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Convergence", Arial, sans-serif;
+    font-weight: bold; /* or bold */
+    font-size:  clamp(20px, 0.5rem + 1vw, 24px);
+    color: #ccccff;
+    text-align: center; 
+    text-shadow: 0.1rem 0.1rem 1px #171535;
+    width: fit-content; /* button only as wide as its text + padding */
+
+    background-image: linear-gradient(rgba(0, 162, 255, 0.411)), var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.2s ease;
+}
+
+.tab-btn.active {
+    background-image: linear-gradient(rgba(255, 222, 37, 0.274)), var(--bg-img);
+    font-family: "Convergence", Arial, sans-serif;
+    font-weight: bold; /* or bold */
+    font-size:  clamp(20px, 0.5rem + 1vw, 24px);
+    color: #030303;
+    text-shadow: 0.1rem 0.1rem 0px #ffffff00;
+}

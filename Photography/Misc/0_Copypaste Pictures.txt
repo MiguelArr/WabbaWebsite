@@ -1,0 +1,2 @@
+for f in *; do echo "<img src=\"/Photography/Misc/$f\">"; done
+

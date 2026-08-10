@@ -4,16 +4,16 @@ document.querySelectorAll('.PhotoGallery img').forEach(img => {
 
 // --- ADD THIS: shuffle each gallery section's images ---
 function shuffleGallery(section) {
-  const imgs = Array.from(section.querySelectorAll('img'));
-  for (let i = imgs.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+const imgs = Array.from(section.querySelectorAll('img'));
+for (let i = imgs.length - 1; i > 0; i--) {
+const j = Math.floor(Math.random() * (i + 1));
     [imgs[i], imgs[j]] = [imgs[j], imgs[i]];
   }
-  imgs.forEach(img => section.appendChild(img)); // reinsert in new order
+imgs.forEach(img => section.appendChild(img)); // reinsert in new order
 }
 
 document.querySelectorAll('.PhotoGallery').forEach(section => {
-  shuffleGallery(section);
+shuffleGallery(section);
 });
 // --- END ADD ---
 
@@ -26,62 +26,62 @@ let currentGalleryImages = [];
 let currentIndex = 0;
 
 function openLightbox(imgList, index) {
-  currentGalleryImages = imgList;
-  currentIndex = index;
-  lightboxImg.src = currentGalleryImages[currentIndex].src;
-  lightboxImg.alt = currentGalleryImages[currentIndex].alt;
-  lightbox.classList.add('active');
+currentGalleryImages = imgList;
+currentIndex = index;
+lightboxImg.src = currentGalleryImages[currentIndex].src;
+lightboxImg.alt = currentGalleryImages[currentIndex].alt;
+lightbox.classList.add('active');
 }
 
 function showNext() {
-  currentIndex = (currentIndex + 1) % currentGalleryImages.length;
-  lightboxImg.src = currentGalleryImages[currentIndex].src;
-  lightboxImg.alt = currentGalleryImages[currentIndex].alt;
+currentIndex = (currentIndex + 1) % currentGalleryImages.length;
+lightboxImg.src = currentGalleryImages[currentIndex].src;
+lightboxImg.alt = currentGalleryImages[currentIndex].alt;
 }
 
 function showPrev() {
-  currentIndex = (currentIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-  lightboxImg.src = currentGalleryImages[currentIndex].src;
-  lightboxImg.alt = currentGalleryImages[currentIndex].alt;
+currentIndex = (currentIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+lightboxImg.src = currentGalleryImages[currentIndex].src;
+lightboxImg.alt = currentGalleryImages[currentIndex].alt;
 }
 
 const closeBtn = document.querySelector('.lightbox .close');
 
 closeBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  lightbox.classList.remove('active');
+e.stopPropagation();
+lightbox.classList.remove('active');
 });
 
 // Attach click listeners per-section, so arrows only cycle within that section
 // (this now reads the SHUFFLED order, since the shuffle already ran above)
 document.querySelectorAll('.PhotoGallery').forEach(section => {
-  const imgsInSection = Array.from(section.querySelectorAll('img'));
-  imgsInSection.forEach((img, index) => {
-    img.addEventListener('click', () => openLightbox(imgsInSection, index));
+const imgsInSection = Array.from(section.querySelectorAll('img'));
+imgsInSection.forEach((img, index) => {
+img.addEventListener('click', () => openLightbox(imgsInSection, index));
   });
 });
 
 nextBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  showNext();
+e.stopPropagation();
+showNext();
 });
 
 prevBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  showPrev();
+e.stopPropagation();
+showPrev();
 });
 
 lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.classList.remove('active');
+if (e.target === lightbox) {
+lightbox.classList.remove('active');
   }
 });
 
 document.addEventListener('keydown', (e) => {
-  if (!lightbox.classList.contains('active')) return;
-  if (e.key === 'Escape') lightbox.classList.remove('active');
-  if (e.key === 'ArrowRight') showNext();
-  if (e.key === 'ArrowLeft') showPrev();
+if (!lightbox.classList.contains('active')) return;
+if (e.key === 'Escape') lightbox.classList.remove('active');
+if (e.key === 'ArrowRight') showNext();
+if (e.key === 'ArrowLeft') showPrev();
 });
 
 // Tab buttons: show only the matching gallery section
@@ -89,19 +89,28 @@ const tabButtons = document.querySelectorAll('.tab-btn');
 const gallerySections = document.querySelectorAll('.PhotoGallery');
 
 tabButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.dataset.target;
-    const section = document.querySelector(`.PhotoGallery[data-section="${target}"]`);
-    const isCurrentlyVisible = section.style.display === 'block';
+btn.addEventListener('click', () => {
+const target = btn.dataset.target;
+const section = document.querySelector(`.PhotoGallery[data-section="${target}"]`);
+const isCurrentlyVisible = section.style.display === 'block';
 
-    gallerySections.forEach(s => {
-      s.style.display = 'none';
+gallerySections.forEach(s => {
+s.style.display = 'none';
     });
-    tabButtons.forEach(b => b.classList.remove('active'));
+tabButtons.forEach(b => b.classList.remove('active'));
 
-    if (!isCurrentlyVisible) {
-      section.style.display = 'block';
-      btn.classList.add('active');
+if (!isCurrentlyVisible) {
+section.style.display = 'block';
+btn.classList.add('active');
     }
   });
 });
+
+// --- ADD THIS: expand/collapse toggle for a standalone button ---
+const expandToggleBtn = document.getElementById('toggle-btn');
+const expandBox = document.getElementById('expand-box');
+
+expandToggleBtn.addEventListener('click', () => {
+  expandBox.classList.toggle('open');
+});
+// --- END ADD ---

@@ -681,12 +681,14 @@ footer {
 .PhotoGallery {
     column-count: 4;
     column-gap: 12px;
+    margin: 12px 12px;
 }
 
 .PhotoGallery img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 3px;
     margin-bottom: 12px;
     break-inside: avoid; /* stops an image from splitting across two columns */
 }
@@ -737,41 +739,45 @@ footer {
 .lightbox-arrow:hover { color: #ffdd25; }
 
 .tab-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    max-width: 100%;
+ background-color: #00000000;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
 }
 
 .tab-btn {
-    padding: 20px 100px;
+    background-color: #00000000;
     border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-family: "Convergence", Arial, sans-serif;
-    font-weight: bold; /* or bold */
-    font-size:  clamp(20px, 0.5rem + 1vw, 24px);
-    color: #ccccff;
-    text-align: center; 
-    text-shadow: 0.1rem 0.1rem 1px #171535;
-    width: fit-content; /* button only as wide as its text + padding */
-
-    background-image: linear-gradient(rgba(0, 162, 255, 0.411)), var(--bg-img);
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.2s ease;
+    position: relative; 
+    width: 300px; 
+    height: 300px;
 }
-
 .tab-btn.active {
     background-image: linear-gradient(rgba(255, 222, 37, 0.274)), var(--bg-img);
-    font-family: "Convergence", Arial, sans-serif;
-    font-weight: bold; /* or bold */
-    font-size:  clamp(20px, 0.5rem + 1vw, 24px);
-    color: #030303;
-    text-shadow: 0.1rem 0.1rem 0px #ffffff00;
+    transform: rotate(-9deg); scale: 120%;
+}
+
+.polaroid-frame {
+    position: absolute; top: 0; left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 2;
+}
+.polaroid-inside {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: inset(30px 30px 20px 30px)
+}
+.expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin: 50px;
+}
+
+.expandable.open {
+    max-height: 100%; /* adjust to be taller than your content */
 }

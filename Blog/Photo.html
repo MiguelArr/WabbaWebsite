@@ -45,7 +45,13 @@
 </div>
 <br><br><br><br><br>
 
-<details style="margin: 50px 50px;">
+<div id="toggle-btn" style="display: flex;justify-content: center;">
+    <button style="border: none; background-color:#fafd5800;">
+        <img src="/Photography/CamSpin.gif">
+    </button>
+</div>
+
+<div id="expand-box" class="expandable">
   <summary style="font-family:Convergence; color: #fafd58;">
     Camera gear details</summary>
     <div>
@@ -59,14 +65,39 @@
         Some pictures were also taken with my phone lol.
     </p>
     </div>
-</details>
+    <br><br><br>
+</div>
 
 <div class="tab-buttons">
-    <button class="tab-btn active" data-target="photography" style="--bg-img: url(/Photography/Good/P1100212_preview.jpeg); background-size: cover; background-position: center;">Photography</button>
-    <button class="tab-btn" data-target="goofs" style="--bg-img: url(/Photography/Goofs/20260424_200028_preview.jpeg)">Goofs</button>
-    <button class="tab-btn" data-target="misc" style="--bg-img: url(/Photography/Misc/P1100120_preview.jpeg)">Misc</button>
-    <button class="tab-btn" data-target="cats" style="--bg-img: url(/Blog/Cats/IMG_20230728_170902_875.jpg)">Cats</button>
+    <button class="tab-btn active" data-target="photography">
+        <!-- Photo layer: clipped -->
+        <div class="polaroid-inside" style="background-image: url(/Photography/Good/P1090969_preview.jpeg);">
+        </div>
+        <img src="/Photography/Polaroid_Photography.png" class="polaroid-frame">
+    </button>
+
+    <button class="tab-btn" data-target="goofs">
+        <!-- Photo layer: clipped -->
+        <div class="polaroid-inside" style="background-image: url(/Photography/Goofs/20250207_150225_preview.jpeg)">
+        </div>
+        <img src="/Photography/Polaroid_Goofs.png" class="polaroid-frame">
+    </button>
+
+    <button class="tab-btn" data-target="misc">
+        <!-- Photo layer: clipped -->
+        <div class="polaroid-inside" style="background-image: url(/Photography/Misc/WhatsApp\ Image\ 2026-08-10\ at\ 11.53.50\ AM.jpeg)">
+        </div>
+        <img src="/Photography/Polaroid_Misc.png" class="polaroid-frame">
+    </button>
+
+    <button class="tab-btn" data-target="cats">
+        <!-- Photo layer: clipped -->
+        <div class="polaroid-inside" style="background-image: url(/Blog/Cats/20230429_172200.jpg)">
+        </div>
+        <img src="/Photography/Polaroid_Cats.png" class="polaroid-frame">
+    </button>
 </div>
+
 <br>
 
 <div class="PhotoGallery" data-section="photography">

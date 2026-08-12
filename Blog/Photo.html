@@ -19,55 +19,7 @@
   </button>
   </a>
 </div>
-<div class="fixed-element-small">
-  <a href="https://x.com/Wabbaboy" target="_blank">
-      <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
-          <img src="../Personal/twitter-logo.png">
-      </button>
-  </a>
-  <br>
-  <a href="https://store.steampowered.com/developer/Wabbaboy" target="_blank">
-      <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
-          <img src="../Personal/Steam_logo.png">
-      </button>
-   </a>
-   <a href="https://wabbaboy.itch.io/" target="blank">
-      <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
-          <img src="../Personal/itch-io-logo.png">
-      </button>
-  </a>
-  <br>
-  <a href="https://www.youtube.com/@wabbaboy" target="blank">
-      <button class="expanding-button-small" id="aboutButton" style="background-color: rgba(183, 0, 255, 0.575);">
-          <img src="../Personal/Youtube_logo.png">
-      </button>
-   </a>
-</div>
 <br><br><br><br><br>
-
-<div id="toggle-btn" style="display: flex;justify-content: center;">
-        <button style="border: none; background-color:#fafd5800;">
-            <img src="/Photography/CamSpin.gif">
-            <img src="/Photography/CamSpin.gif">
-            <img src="/Photography/CamSpin.gif">
-            <img src="/Photography/CamSpin.gif">
-            <img src="/Photography/CamSpin.gif">
-        </button>
-</div>
-
-<div id="expand-box" class="expandable">
-    <div style="display: flex;align-items: center;">
-        <p class="readable-paragraph" style="flex: 1;">
-            I use a Lumix LX10. I got it because it seemed to be one of the best compact cameras and so far it has been super easy to use. It's small and pocketable and gives you all the control you need, you can't change its lens and I'm interested in really zoomed out and zoomed in photography so who knows if I'll delve into that at some point. So far I'm not really thinking about it and just enjoying the process.
-            <br><br>
-            Some pictures were also taken with my phone lol.
-        </p>
-        <div style="display: flex; justify-content: center;flex: 1;">
-            <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 4.13.18 PM.jpeg" style="max-width: 80%;border-radius: 50%;box-shadow: 5px 5px 3px #00000081;">
-        </div>
-    </div>
-    <br><br><br>
-</div>
 
 <div class="tab-buttons">
     <button class="tab-btn active" data-target="photography">
@@ -97,9 +49,27 @@
         </div>
         <img src="/Photography/Polaroid_Cats.png" class="polaroid-frame">
     </button>
+
+    <button class="tab-btn" id="gear-toggle-btn" data-target="gear">
+        <div class="polaroid-inside" style="background-image: url(/Photography/Misc/WhatsApp\ Image\ 2026-08-07\ at\ 4.13.18\ PM.jpeg);"></div>
+        <img src="/Photography/Polaroid_Gear.png" class="polaroid-frame">
+    </button>
 </div>
 
 <br>
+
+<div id="expand-box" class="expandable" data-section="gear" style="display: none;">
+    <div style="display: flex;align-items: center;">
+        <p class="readable-paragraph" style="flex: 1;">
+                I use a Lumix LX10. I got it because it seemed to be one of the best compact cameras and so far it has been super easy to use. It's small and pocketable and gives you all the control you need, you can't change its lens and I'm interested in really zoomed out and zoomed in photography so who knows if I'll delve into that at some point. So far I'm not really thinking about it and just enjoying the process.
+                <br><br>
+                Some pictures were also taken with my phone lol.
+        </p>
+        <div style="display: flex; justify-content: center;flex: 1;">
+                <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 4.13.18 PM.jpeg" style="max-width: 80%;border-radius: 5px;box-shadow: 5px 5px 3px #00000081;">
+        </div>
+    </div>
+</div>
 
 <div class="PhotoGallery" data-section="photography">
     <img src="/Photography/Good/20241203_114258_preview.jpeg">
@@ -107,20 +77,20 @@
     <img src="/Photography/Good/20241203_133555_preview.jpeg">
     <img src="/Photography/Good/20260420_170247_preview.jpeg">
     <img src="/Photography/Good/20260424_122031_preview.jpeg">
-    <img src="/Photography/Good/P1090610_preview.jpeg">
+    <img src="/Photography/Good/P1090610_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1090618_preview.jpeg">
     <img src="/Photography/Good/P1090619_preview.jpeg">
-    <img src="/Photography/Good/P1090803_preview.jpeg">
-    <img src="/Photography/Good/P1090840_preview.jpeg">
+    <img src="/Photography/Good/P1090803_preview.jpeg" class="liked">
+    <img src="/Photography/Good/P1090840_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1090865_preview.jpeg">
-    <img src="/Photography/Good/P1090915_preview.jpeg">
+    <img src="/Photography/Good/P1090915_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1090938_preview.jpeg">
     <img src="/Photography/Good/P1090944_preview.jpeg">
-    <img src="/Photography/Good/P1090969_preview.jpeg">
+    <img src="/Photography/Good/P1090969_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1090977_preview.jpeg">
-    <img src="/Photography/Good/P1090984_preview.jpeg">
+    <img src="/Photography/Good/P1090984_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1090999_preview.jpeg">
-    <img src="/Photography/Good/P1100026_preview.jpeg">
+    <img src="/Photography/Good/P1100026_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100028_preview.jpeg">
     <img src="/Photography/Good/P1100062_preview.jpeg">
     <img src="/Photography/Good/P1100075_preview.jpeg">
@@ -132,13 +102,13 @@
     <img src="/Photography/Good/P1100143_preview.jpeg">
     <img src="/Photography/Good/P1100163_preview.jpeg">
     <img src="/Photography/Good/P1100170_preview.jpeg">
-    <img src="/Photography/Good/P1100183_preview.jpeg">
+    <img src="/Photography/Good/P1100183_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100189_preview.jpeg">
     <img src="/Photography/Good/P1100212_preview.jpeg">
-    <img src="/Photography/Good/P1100230_preview.jpeg">
+    <img src="/Photography/Good/P1100230_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100234_preview.jpeg">
     <img src="/Photography/Good/P1100240_preview.jpeg">
-    <img src="/Photography/Good/P1100246_preview.jpeg">
+    <img src="/Photography/Good/P1100246_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100253_preview.jpeg">
     <img src="/Photography/Good/P1100255_preview.jpeg">
     <img src="/Photography/Good/P1100269_preview.jpeg">
@@ -147,18 +117,18 @@
     <img src="/Photography/Good/P1100354_preview.jpeg">
     <img src="/Photography/Good/P1100360_preview.jpeg">
     <img src="/Photography/Good/P1100375_preview.jpeg">
-    <img src="/Photography/Good/P1100382_preview.jpeg">
+    <img src="/Photography/Good/P1100382_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100388_preview.jpeg">
     <img src="/Photography/Good/P1100394_preview.jpeg">
     <img src="/Photography/Good/P1100404_preview.jpeg">
     <img src="/Photography/Good/P1100416_preview.jpeg">
     <img src="/Photography/Good/P1100422_preview.jpeg">
     <img src="/Photography/Good/P1100431_preview.jpeg">
-    <img src="/Photography/Good/P1100439_preview.jpeg">
+    <img src="/Photography/Good/P1100439_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100453_preview.jpeg">
     <img src="/Photography/Good/P1100460_preview.jpeg">
     <img src="/Photography/Good/P1100471_preview.jpeg">
-    <img src="/Photography/Good/P1100500_preview.jpeg">
+    <img src="/Photography/Good/P1100500_preview.jpeg" class="liked">
     <img src="/Photography/Good/P1100513_preview.jpeg">
     <img src="/Photography/Good/P1100528_preview.jpeg">
     <img src="/Photography/Good/P1100679_preview.jpeg">
@@ -167,9 +137,13 @@
     <img src="/Photography/Good/P1100729_preview.jpeg">
     <img src="/Photography/Good/WhatsApp Image 2026-08-07 at 5.13.14 PM.jpeg">
     <img src="/Photography/Good/WhatsApp Image 2026-08-07 at 5.13.18 PM.jpeg">
-    <img src="/Photography/Good/WhatsApp Image 2026-08-07 at 5.13.22 PM.jpeg">
+    <img src="/Photography/Good/WhatsApp Image 2026-08-07 at 5.13.22 PM.jpeg" class="liked">
     <img src="/Photography/Good/WhatsApp Image 2026-08-07 at 5.13.23 PM (1).jpeg">
-
+    <img src="/Photography/Good/20250811_175702_preview.jpeg" class="liked">
+    <img src="/Photography/Good/20250811_190538_preview.jpeg">
+    <img src="/Photography/Good/20250812_112142_preview.jpeg" class="liked">
+    <img src="/Photography/Good/20250812_131206_preview.jpeg">
+    <img src="/Photography/Good/20241130_141233_preview.jpeg">
 </div>
 
 <div class="PhotoGallery" data-section="goofs" style="display: none;">
@@ -178,10 +152,11 @@
     <img src="/Photography/Goofs/20250319_110855_preview.jpeg">
     <img src="/Photography/Goofs/20260418_105617_preview.jpeg">
     <img src="/Photography/Goofs/20260419_204450_preview.jpeg">
-    <img src="/Photography/Goofs/20260424_200028_preview.jpeg">
+    <img src="/Photography/Goofs/20241204_114745_preview.jpeg">
+    <img src="/Photography/Goofs/20260424_200028_preview.jpeg" class="liked">
     <img src="/Photography/Goofs/P1100200_preview.jpeg">
     <img src="/Photography/Goofs/P1100209_preview.jpeg">
-    <img src="/Photography/Goofs/P1100324_preview.jpeg">
+    <img src="/Photography/Goofs/P1100324_preview.jpeg" class="liked">
     <img src="/Photography/Goofs/WhatsApp Image 2026-08-07 at 5.13.21 PM.jpeg">
 </div>
 
@@ -190,97 +165,112 @@
     <img src="/Photography/Misc/20241027_125123_preview.jpeg">
     <img src="/Photography/Misc/20250112_100001_preview.jpeg">
     <img src="/Photography/Misc/20250227_065225_preview.jpeg">
-    <img src="/Photography/Misc/20250627_120626_preview.jpeg">
-    <img src="/Photography/Misc/20250830_110304_preview.jpeg">
+    <img src="/Photography/Misc/20250627_120626_preview.jpeg" class="liked">
+    <img src="/Photography/Misc/20250830_110304_preview.jpeg" class="liked">
     <img src="/Photography/Misc/20250924_172952_preview.jpeg">
     <img src="/Photography/Misc/20250925_122422_preview.jpeg">
     <img src="/Photography/Misc/20251009_102419_preview.jpeg">
-    <img src="/Photography/Misc/20251011_064713_preview.jpeg">
+    <img src="/Photography/Misc/20251011_064713_preview.jpeg" class="liked">
     <img src="/Photography/Misc/20251103_232257_preview.jpeg">
     <img src="/Photography/Misc/20251109_120445_preview.jpeg">
-    <img src="/Photography/Misc/20251109_120650_preview.jpeg">
+    <img src="/Photography/Misc/20251109_120650_preview.jpeg"class="liked">
     <img src="/Photography/Misc/20251109_120908_preview.jpeg">
     <img src="/Photography/Misc/20251111_123520_preview.jpeg">
     <img src="/Photography/Misc/20251113_141824_preview.jpeg">
-    <img src="/Photography/Misc/20251113_214056_preview-1.jpeg">
+    <img src="/Photography/Misc/20251113_214056_preview-1.jpeg" class="liked">
     <img src="/Photography/Misc/20251220_232049_preview.jpeg">
     <img src="/Photography/Misc/20251223_115407_preview.jpeg">
     <img src="/Photography/Misc/20251223_115804_preview.jpeg">
     <img src="/Photography/Misc/20260220_160918_preview.jpeg">
-    <img src="/Photography/Misc/20260309_222000_preview.jpeg">
+    <img src="/Photography/Misc/20260309_222000_preview.jpeg" class="liked">
     <img src="/Photography/Misc/20260314_180852_preview.jpeg">
-    <img src="/Photography/Misc/20260321_154825_preview.jpeg">
+    <img src="/Photography/Misc/20260321_154825_preview.jpeg" class="liked">
     <img src="/Photography/Misc/20260323_115849_preview.jpeg">
     <img src="/Photography/Misc/20260408_162758_preview.jpeg">
     <img src="/Photography/Misc/20260420_224617_preview.jpeg">
-    <img src="/Photography/Misc/20260421_151003_preview.jpeg">
+    <img src="/Photography/Misc/20260421_151003_preview.jpeg" class="liked">
     <img src="/Photography/Misc/20260424_141250_preview.jpeg">
     <img src="/Photography/Misc/20260424_145734_preview.jpeg">
     <img src="/Photography/Misc/IMG-20260325-WA0010_preview.jpeg">
-    <img src="/Photography/Misc/P1090768_preview.jpeg">
+    <img src="/Photography/Misc/P1090768_preview.jpeg" class="liked">
     <img src="/Photography/Misc/P1090776_preview.jpeg">
     <img src="/Photography/Misc/P1100120_preview.jpeg">
-    <img src="/Photography/Misc/P1100746.JPG">
+    <img src="/Photography/Misc/P1100746.JPG" class="liked">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 4.13.18 PM.jpeg">
-    <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 5.13.17 PM.jpeg">
+    <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 5.13.17 PM.jpeg" class="liked">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 5.13.26 PM (1).jpeg">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-07 at 5.13.27 PM.jpeg">
-    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.49 AM.jpeg">
+    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.49 AM.jpeg" class="liked">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (1).jpeg">
-    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (2).jpeg">
+    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (2).jpeg" class="liked">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (3).jpeg">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (4).jpeg">
-    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (5).jpeg">
+    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (5).jpeg" class="liked">
     <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM (6).jpeg">
-    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM.jpeg">
+    <img src="/Photography/Misc/WhatsApp Image 2026-08-10 at 11.53.50 AM.jpeg" class="liked">
+    <img src="/Photography/Misc/20240320_210543_preview.jpeg">
+    <img src="/Photography/Misc/20240321_123632_preview.jpeg">
+    <img src="/Photography/Misc/20240329_135823_preview.jpeg">
+    <img src="/Photography/Misc/20240330_000540_preview.jpeg">
+    <img src="/Photography/Misc/20240403_230537_preview.jpeg">
+    <img src="/Photography/Misc/20240405_230011_preview.jpeg" class="liked">
+    <img src="/Photography/Misc/20240428_224958_preview.jpeg" class="liked">
 </div>
 
 <div class="PhotoGallery" data-section="cats" style="display: none;">
 
-    <img src="/Blog/Cats/20221211_130355.jpg">
+<img src="/Blog/Cats/20221211_130355.jpg">
 <img src="/Blog/Cats/20221211_212941.jpg">
 <img src="/Blog/Cats/20221212_081923.jpg">
 <img src="/Blog/Cats/20221213_120132.jpg">
-<img src="/Blog/Cats/20221213_153712.jpg">
+<img src="/Blog/Cats/20221213_153712.jpg" class="liked">
 <img src="/Blog/Cats/20221214_093822.jpg">
-<img src="/Blog/Cats/20230313_161524.jpg">
+<img src="/Blog/Cats/20230313_161524.jpg" class="liked">
 <img src="/Blog/Cats/20230314_230535.jpg">
 <img src="/Blog/Cats/20230325_182429.jpg">
-<img src="/Blog/Cats/20230325_182430.jpg">
-<img src="/Blog/Cats/20230423_102137.jpg">
-<img src="/Blog/Cats/20230429_172200.jpg">
+<img src="/Blog/Cats/20230325_182430.jpg" class="liked">
+<img src="/Blog/Cats/20230423_102137.jpg" class="liked">
+<img src="/Blog/Cats/20230429_172200.jpg" class="liked">
 <img src="/Blog/Cats/20230515_190149.jpg">
 <img src="/Blog/Cats/20230711_070724.jpg">
-<img src="/Blog/Cats/20230717_174920.jpg">
-<img src="/Blog/Cats/20230719_085752.jpg">
-<img src="/Blog/Cats/20230721_200349.jpg">
-<img src="/Blog/Cats/20230724_152136.jpg">
-<img src="/Blog/Cats/20230724_152136(1).jpg">
-<img src="/Blog/Cats/20230822_210605.jpg">
-<img src="/Blog/Cats/20230828_205039.jpg">
-<img src="/Blog/Cats/20230901_100855.jpg">
+<img src="/Blog/Cats/20230717_174920.jpg" class="liked">
+<img src="/Blog/Cats/20230719_085752.jpg" class="liked">
+<img src="/Blog/Cats/20230721_200349.jpg" class="liked">
+<img src="/Blog/Cats/20230724_152136.jpg" class="liked">
+<img src="/Blog/Cats/20230822_210605.jpg" class="liked">
+<img src="/Blog/Cats/20230828_205039.jpg" class="liked">
+<img src="/Blog/Cats/20230901_100855.jpg" class="liked">
 <img src="/Blog/Cats/20230915_092211.jpg">
 <img src="/Blog/Cats/20230922_094447.jpg">
 <img src="/Blog/Cats/20231004_165754.jpg">
-<img src="/Blog/Cats/20231026_170302.jpg">
-<img src="/Blog/Cats/20231210_125714.jpg">
+<img src="/Blog/Cats/20231026_170302.jpg" class="liked">
+<img src="/Blog/Cats/20231210_125714.jpg" class="liked">
 <img src="/Blog/Cats/20231211_182248.jpg">
-<img src="/Blog/Cats/20231227_084112.jpg">
-<img src="/Blog/Cats/20240312_131546.jpg">
-<img src="/Blog/Cats/20240320_162505.jpg">
-<img src="/Blog/Cats/20240403_143442.jpg">
-<img src="/Blog/Cats/20240510_111424.jpg">
-<img src="/Blog/Cats/20240608_173100.jpg">
-<img src="/Blog/Cats/20240617_144922.jpg">
-<img src="/Blog/Cats/20240622_193013.jpg">
-<img src="/Blog/Cats/20240622_195307.jpg">
+<img src="/Blog/Cats/20231227_084112.jpg" class="liked">
+<img src="/Blog/Cats/20240312_131546.jpg" class="liked">
+<img src="/Blog/Cats/20240320_162505.jpg" class="liked">
+<img src="/Blog/Cats/20240403_143442.jpg" class="liked">
+<img src="/Blog/Cats/20240510_111424.jpg" class="liked">
+<img src="/Blog/Cats/20240608_173100.jpg" class="liked">
+<img src="/Blog/Cats/20240617_144922.jpg" class="liked">
+<img src="/Blog/Cats/20240622_193013.jpg" class="liked">
+<img src="/Blog/Cats/20240622_195307.jpg" class="liked">
 <img src="/Blog/Cats/20240630_153541.jpg">
-<img src="/Blog/Cats/20240802_093414.jpg">
+<img src="/Blog/Cats/20240802_093414.jpg" class="liked">
 <img src="/Blog/Cats/20240809_230952.jpg">
 <img src="/Blog/Cats/20240813_062145.jpg">
+<img src="/Blog/Cats/20241021_184346_preview.jpeg">
+<img src="/Blog/Cats/20241110_140344_preview.jpeg">
+<img src="/Blog/Cats/20241121_064420_preview-1.jpeg">
+<img src="/Blog/Cats/20241121_064420_preview.jpeg">
+<img src="/Blog/Cats/20241124_192457_preview.jpeg">
+<img src="/Blog/Cats/20250505_144955_preview.jpeg">
+<img src="/Blog/Cats/20250717_101953_preview.jpeg">
+<img src="/Blog/Cats/20260610_142908_preview.jpeg">
 <img src="/Blog/Cats/IMG_20230728_170902_333.jpg">
 <img src="/Blog/Cats/IMG_20230728_170902_875.jpg">
-<img src="/Blog/Cats/MyCats_Thumbnail.png">
+<img src="/Blog/Cats/MyCats_Thumbnail.png" class="liked">
+
 
 </div>
 

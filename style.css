@@ -472,12 +472,10 @@ a:hover {
 
 
 .content {
-
     width: clamp(100px,80%,1300px);
     margin-left: auto;
     margin-right: auto;
     font-size: 1.1em;
-
 }
 .blog-content {
     width: 100%;
@@ -540,7 +538,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 100px;
 }
 .photo-gallery {
     display: flex;
@@ -684,17 +681,32 @@ footer {
     margin: 12px 12px;
 }
 
-.PhotoGallery img {
+.photo-item {
+    position: relative;
+    margin-bottom: 12px;
+    break-inside: avoid; /* stops an image from splitting across two columns */
+}
+
+.PhotoGallery img:not(.liked-badge) {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 3px;
-    margin-bottom: 12px;
-    break-inside: avoid; /* stops an image from splitting across two columns */
     box-shadow: 5px 5px 2px #00000081;
 }
-.PhotoGallery img:hover {
+.PhotoGallery img:not(.liked-badge):hover {
     filter: brightness(120%);
+}
+
+.liked-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    z-index: 2;
+    pointer-events: none; /* clicks pass through to the photo underneath */
+    filter: drop-shadow(0 0 2px #00000090);
 }
 .lightbox {
     display: none;
@@ -748,15 +760,15 @@ footer {
 }
 
 .tab-btn {
-    background-color: #00000000;
+    background-color: #ff000000;
     border: none;
     position: relative; 
-    width: 300px; 
-    height: 300px;
+    width: 200px; 
+    height: 200px;
 }
 .tab-btn.active {
-    background-image: linear-gradient(rgba(255, 222, 37, 0.274)), var(--bg-img);
     transform: rotate(-9deg); scale: 120%;
+    filter: brightness(1.5);
 }
 
 .polaroid-frame {
@@ -770,14 +782,44 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    clip-path: inset(30px 30px 20px 30px)
+    clip-path: inset(10px 20px 10px 20px)
 }
 .expandable {
-    max-height: 0;
     overflow: hidden;
     margin: 50px;
 }
 
 .expandable.open {
     max-height: 100%; /* adjust to be taller than your content */
+}
+
+.webring {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.webring div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+}
+
+.webring img {
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    width: clamp(100px,30vw,150px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: auto;
+    display: block;
+    border-radius: 13px;
+    box-shadow: 5px 5px 8px #00000081;
+}
+
+.webring img:hover {
+    filter: brightness(1.25);
 }
